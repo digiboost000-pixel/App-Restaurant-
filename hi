@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coumba Restau | Saveurs Authentiques & IA</title>
+    <meta name="description" content="Le meilleur de la cuisine sénégalaise et internationale chez Coumba Restau.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body { font-family: 'Lato', sans-serif; }
+        h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            transition: transform 0.3s ease;
+        }
+        .glass-card:hover { transform: translateY(-3px); background: rgba(255, 255, 255, 0.25); }
+
+        .fab-container:hover .fab-options { transform: scale(1); opacity: 1; pointer-events: all; }
+        .fab-options { transform: scale(0); opacity: 0; transform-origin: bottom right; transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); }
+        .chat-box { display: none; }
+        .chat-box.active { display: flex; }
+        
+        .nav-scrolled { background-color: rgba(255, 255, 255, 0.95); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); color: #44403c !important; }
+.         .nav-transparent { background-color: transparent; color: white; }
+        .nav-transparent a.nav-link { color: white; }
+        .nav-scrolled a.nav-link { color: #57534e; }
+
+        .internal-page-padding { padding-top: 120px; min-height: 80vh; }
+tu
+        #cart-modal { transition: opacity 0.3s ease, transform 0.3s ease; }
+        #cart-modal.hidden-modal { opacity: 0; pointer-events: none; transform: translateY(20px); }
+        #cart-modal.visible-modal { opacity: 1; pointer-events: all; transform: translateY(0); }
+
+        .star-btn:hover, .star-btn.active { fill: #d97706; color: #d97706; transform: scale(1.2); }
+        .star-btn { transition: all 0.2s; cursor: pointer; color: #d6d3d1; }
+
+        .typing-indicator span {
+            display: inline-block; width: 6px; height: 6px; background-color: #4f46e5; border-radius: 50%;
+            animation: typing 1.4s infinite ease-in-out both; margin: 0 1px;
+        }
+        .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
+        .typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+        @keyframes typing { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
+        .prose p { margin-bottom: 0.5em; } .prose strong { color: #d97706; font-weight: 700; }
+
+        .page-section { display: none; animation: fadeIn 0.4s ease-out; }
+        .page-section.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .dropdown-menu { display: none; }
+        .group:hover .dropdown-menu { display: block; animation: slideDown 0.2s ease-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .order-type-btn.active { border-color: #d97706; color: #d97706; background-color: #fffbeb; }
+        .payment-radio:checked + div { border-color: #d97706; background-color: #fffbeb; }
+        .payment-radio:checked + div .radio-circle { border-color: #d97706; border-width: 5px; }
+        
+        /* Style pour les boutons de pourboire */
+        .tip-btn.active { background-color: #d97706; color: white; border-color: #d97706; }
+        
+        /* Animation Succès */
+        .success-icon { animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        @keyframes popIn { from { transform: scale(0) rotate(-45deg); opacity: 0; } to { transform: scale(1) rotate(0); opacity: 1; } }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased relative flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-500 nav-transparent py-4" id="navbar">
+        <div class="container mx-auto px-6 relative flex justify-between items-center h-16">
+            <button id="mobile-menu-btn" onclick="toggleMenu()" class="focus:outline-none text-inherit hover:text-amber-500 transition z-50">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+            <a href="#" onclick="showPage('home')" class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center z-50">
+                <div class="h-16 w-16 rounded-full overflow-hidden border-4 border-white shadow-lg bg-white flex items-center justify-center transform transition hover:scale-105">
+                   <img src="https://res.cloudinary.com/dkvj68ssp/image/upload/v1740243987/1763830581893_x8qg2q.jpg" alt="Logo Coumba Restau" class="w-full h-full object-cover">
+                </div>
+            </a>
+            <button onclick="showPage('panier')" class="relative focus:outline-none text-inherit hover:text-amber-500 transition z-50">
+                <i data-lucide="shopping-bag" class="w-7 h-7"></i>
+                <span id="header-cart-count" class="absolute -top-2 -right-2 bg-amber-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center transform scale-0 transition-transform">0</span>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden bg-white text-stone-800 border-t border-stone-100 absolute w-full shadow-2xl p-6 flex flex-col gap-4 top-full left-0 z-40 max-h-[80vh] overflow-y-auto">
+            <span class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">Navigation</span>
+            <a href="#" onclick="showPage('home'); toggleMenu()" class="hover:text-amber-600 font-medium pl-2 border-l-2 border-transparent hover:border-amber-600 transition">Accueil</a>
+            <a href="#" onclick="showPage('menu'); toggleMenu()" class="hover:text-amber-600 font-medium pl-2 border-l-2 border-transparent hover:border-amber-600 transition">Commander</a>
+            <a href="#" onclick="showPage('reservation'); toggleMenu()" class="hover:text-amber-600 font-medium pl-2 border-l-2 border-transparent hover:border-amber-600 transition">Réserver</a>
+            <a href="#" onclick="showPage('avis'); toggleMenu()" class="hover:text-amber-600 font-medium pl-2 border-l-2 border-transparent hover:border-amber-600 transition">Avis Clients</a>
+            <div class="h-px bg-stone-100 my-2"></div>
+            <span class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">Plus d'options</span>
+            <button onclick="openPageModal('traiteur'); toggleMenu()" class="flex items-center gap-3 hover:text-amber-600 transition py-1 w-full text-left"><i data-lucide="chef-hat" class="w-4 h-4"></i> <span>Traiteur</span></button>
+            <button onclick="openPageModal('galerie'); toggleMenu()" class="flex items-center gap-3 hover:text-amber-600 transition py-1 w-full text-left"><i data-lucide="image" class="w-4 h-4"></i> <span>Galerie</span></button>
+            <button onclick="openPageModal('carrieres'); toggleMenu()" class="flex items-center gap-3 hover:text-amber-600 transition py-1 w-full text-left"><i data-lucide="briefcase" class="w-4 h-4"></i> <span>Carrières</span></button>
+            <button onclick="openPageModal('compte'); toggleMenu()" class="flex items-center gap-3 hover:text-amber-600 transition py-1 w-full text-left"><i data-lucide="user" class="w-4 h-4"></i> <span>Compte</span></button>
+        </div>
+        <div class="hidden md:block absolute top-4 right-24 z-50">
+             <div class="relative group">
+                <button class="nav-link text-white font-medium flex items-center gap-1 outline-none cursor-pointer py-2 bg-black/20 px-4 rounded-full hover:bg-black/30 transition backdrop-blur-sm">Plus d'options <i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+                <div class="dropdown-menu absolute top-full right-0 mt-2 w-56 bg-white shadow-xl rounded-xl border border-stone-100 overflow-hidden pt-2">
+                    <button onclick="openPageModal('traiteur')" class="block w-full text-left px-5 py-3 hover:bg-amber-50 text-stone-600 hover:text-amber-600 transition border-b border-stone-50 flex items-center gap-2"><i data-lucide="chef-hat" class="w-4 h-4"></i> Traiteur</button>
+                    <button onclick="openPageModal('galerie')" class="block w-full text-left px-5 py-3 hover:bg-amber-50 text-stone-600 hover:text-amber-600 transition border-b border-stone-50 flex items-center gap-2"><i data-lucide="image" class="w-4 h-4"></i> Galerie</button>
+                    <button onclick="openPageModal('carrieres')" class="block w-full text-left px-5 py-3 hover:bg-amber-50 text-stone-600 hover:text-amber-600 transition border-b border-stone-50 flex items-center gap-2"><i data-lucide="briefcase" class="w-4 h-4"></i> Carrières</button>
+                    <button onclick="openPageModal('compte')" class="block w-full text-left px-5 py-3 hover:bg-amber-50 text-stone-600 hover:text-amber-600 transition flex items-center gap-2"><i data-lucide="user" class="w-4 h-4"></i> Mon Compte</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- === PAGE ACCUEIL === -->
+    <div id="page-home" class="page-section active">
+        <section class="hero-bg flex items-center justify-center text-center px-4 pt-32 pb-20">
+            <div class="max-w-4xl mx-auto text-white flex flex-col items-center justify-center h-full">
+                <div class="mb-6 animate-fade-in-up"><span class="inline-block text-amber-400 text-xl md:text-2xl font-serif font-medium tracking-wider uppercase">Bienvenue chez Coumba Restau</span></div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-lg animate-fade-in-up" style="animation-delay: 0.1s;">L'Excellence de la <br/> Cuisine Sénégalaise</h1>
+                <p class="text-lg md:text-xl text-stone-100 mb-12 max-w-2xl mx-auto font-light drop-shadow-md animate-fade-in-up" style="animation-delay: 0.2s;">Une fusion entre traditions culinaires ancestrales et gastronomie moderne. Commandez vos plats préférés ou réservez une table.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-3xl mx-auto animate-fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="glass-card p-5 flex items-center gap-4 text-left hover:bg-white/20 transition"><div class="bg-white/20 p-3 rounded-full"><i data-lucide="clock" class="w-6 h-6 text-amber-400"></i></div><div><h4 class="font-bold text-sm uppercase text-stone-300">Horaires d'ouverture</h4><p class="text-amber-200 text-xs font-medium uppercase tracking-wide mb-1">Lun - Ven</p><p class="font-semibold text-white text-lg">11:00 - 23:00</p></div></div>
+                    <div class="glass-card p-5 flex items-center gap-4 text-left hover:bg-white/20 transition"><div class="bg-white/20 p-3 rounded-full"><i data-lucide="map-pin" class="w-6 h-6 text-amber-400"></i></div><div><h4 class="font-bold text-sm uppercase text-stone-300">Adresse</h4><p class="font-semibold text-white text-lg">123 Rue de la Rép.</p></div></div>
+                    <div class="glass-card p-5 flex items-center gap-4 text-left hover:bg-white/20 transition"><div class="bg-white/20 p-3 rounded-full"><i data-lucide="phone" class="w-6 h-6 text-amber-400"></i></div><div><h4 class="font-bold text-sm uppercase text-stone-300">Contact</h4><p class="font-semibold text-white text-lg">+221 33 800 00 00</p></div></div>
+                </div>
+            </div>
+        </section>
+        <!-- [MENU, RESERVATION, AVIS SECTIONS - Same as before] -->
+        <section id="menu" class="py-20 bg-white relative">
+            <div class="container mx-auto px-6 pb-20">
+                <div class="text-center mb-10"><span class="text-amber-600 font-bold uppercase tracking-wider text-sm">Menu</span><h2 class="text-4xl font-serif font-bold text-stone-800 mt-2">Commandez vos Plats</h2><div class="w-24 h-1 bg-amber-500 mx-auto mt-4"></div></div>
+                <div class="flex flex-wrap justify-center gap-2 mb-12"><button onclick="filterMenu('all')" class="menu-tab active px-6 py-2 rounded-full border-2 border-amber-600 bg-amber-600 text-white font-bold transition hover:bg-amber-700">Tout</button><button onclick="filterMenu('entree')" class="menu-tab px-6 py-2 rounded-full border-2 border-stone-200 text-stone-600 font-bold transition hover:border-amber-600 hover:text-amber-600">Entrées</button><button onclick="filterMenu('plat')" class="menu-tab px-6 py-2 rounded-full border-2 border-stone-200 text-stone-600 font-bold transition hover:border-amber-600 hover:text-amber-600">Plats</button><button onclick="filterMenu('dessert')" class="menu-tab px-6 py-2 rounded-full border-2 border-stone-200 text-stone-600 font-bold transition hover:border-amber-600 hover:text-amber-600">Desserts</button><button onclick="filterMenu('boisson')" class="menu-tab px-6 py-2 rounded-full border-2 border-stone-200 text-stone-600 font-bold transition hover:border-amber-600 hover:text-amber-600">Boissons</button></div>
+                <div class="max-w-5xl mx-auto"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="menu-grid">
+                    <!-- ITEMS -->
+                     <div class="menu-item group relative bg-stone-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition border border-stone-100" data-category="entree"><div class="h-56 overflow-hidden relative"><img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><button onclick="showDishInfo('Fatayas')" class="absolute top-3 right-3 bg-white/90 p-2 rounded-full text-stone-700 hover:text-amber-600 shadow-md transition"><i data-lucide="info" class="w-4 h-4"></i></button></div><div class="p-5"><div class="flex justify-between items-start mb-2"><h3 class="text-xl font-serif font-bold">Fatayas (3 pièces)</h3><span class="text-amber-600 font-bold">2 500 F</span></div><p class="text-stone-500 text-sm mb-4">Chaussons croustillants farcis.</p><button onclick="addToCart(this, 'Fatayas', 2500)" class="w-full bg-white border-2 border-stone-200 text-stone-700 font-bold py-2 rounded-lg hover:bg-amber-600 hover:border-amber-600 hover:text-white transition flex items-center justify-center gap-2"><i data-lucide="plus" class="w-4 h-4"></i> Ajouter</button></div></div>
+                     <div class="menu-item group relative bg-stone-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition border border-stone-100" data-category="plat"><div class="h-56 overflow-hidden relative"><img src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><button onclick="showDishInfo('Thieboudienne')" class="absolute top-3 right-3 bg-white/90 p-2 rounded-full text-stone-700 hover:text-amber-600 shadow-md transition"><i data-lucide="info" class="w-4 h-4"></i></button></div><div class="p-5"><div class="flex justify-between items-start mb-2"><h3 class="text-xl font-serif font-bold">Thieboudienne</h3><span class="text-amber-600 font-bold">4 500 F</span></div><p class="text-stone-500 text-sm mb-4">Le plat national, riz au poisson.</p><button onclick="addToCart(this, 'Thieboudienne', 4500)" class="w-full bg-white border-2 border-stone-200 text-stone-700 font-bold py-2 rounded-lg hover:bg-amber-600 hover:border-amber-600 hover:text-white transition flex items-center justify-center gap-2"><i data-lucide="plus" class="w-4 h-4"></i> Ajouter</button></div></div>
+                     <div class="menu-item group relative bg-stone-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition border border-stone-100" data-category="plat"><div class="h-56 overflow-hidden relative"><img src="https://images.unsplash.com/photo-1574484284008-48552748f358?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><button onclick="showDishInfo('Yassa Poulet')" class="absolute top-3 right-3 bg-white/90 p-2 rounded-full text-stone-700 hover:text-amber-600 shadow-md transition"><i data-lucide="info" class="w-4 h-4"></i></button></div><div class="p-5"><div class="flex justify-between items-start mb-2"><h3 class="text-xl font-serif font-bold">Yassa Poulet</h3><span class="text-amber-600 font-bold">4 000 F</span></div><p class="text-stone-500 text-sm mb-4">Poulet braisé, oignons, citron.</p><button onclick="addToCart(this, 'Yassa Poulet', 4000)" class="w-full bg-white border-2 border-stone-200 text-stone-700 font-bold py-2 rounded-lg hover:bg-amber-600 hover:border-amber-600 hover:text-white transition flex items-center justify-center gap-2"><i data-lucide="plus" class="w-4 h-4"></i> Ajouter</button></div></div>
+                     <div class="menu-item group relative bg-stone-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition border border-stone-100" data-category="plat"><div class="h-56 overflow-hidden relative"><img src="https://images.unsplash.com/photo-1606728035753-307834af822a?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><button onclick="showDishInfo('Mafé Bœuf')" class="absolute top-3 right-3 bg-white/90 p-2 rounded-full text-stone-700 hover:text-amber-600 shadow-md transition"><i data-lucide="info" class="w-4 h-4"></i></button></div><div class="p-5"><div class="flex justify-between items-start mb-2"><h3 class="text-xl font-serif font-bold">Mafé Bœuf</h3><span class="text-amber-600 font-bold">4 500 F</span></div><p class="text-stone-500 text-sm mb-4">Ragoût à la pâte d'arachide.</p><button onclick="addToCart(this, 'Mafé Bœuf', 4500)" class="w-full bg-white border-2 border-stone-200 text-stone-700 font-bold py-2 rounded-lg hover:bg-amber-600 hover:border-amber-600 hover:text-white transition flex items-center justify-center gap-2"><i data-lucide="plus" class="w-4 h-4"></i> Ajouter</button></div></div>
+                     <div class="menu-item group relative bg-stone-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition border border-stone-100" data-category="dessert"><div class="h-56 overflow-hidden relative"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><button onclick="showDishInfo('Thiakry')" class="absolute top-3 right-3 bg-white/90 p-2 rounded-full text-stone-700 hover:text-amber-600 shadow-md transition"><i data-lucide="info" class="w-4 h-4"></i></button></div><div class="p-5"><div class="flex justify-between items-start mb-2"><h3 class="text-xl font-serif font-bold">Thiakry</h3><span class="text-amber-600 font-bold">2 000 F</span></div><p class="text-stone-500 text-sm mb-4">Couscous de mil, yaourt sucré.</p><button onclick="addToCart(this, 'Thiakry', 2000)" class="w-full bg-white border-2 border-stone-200 text-stone-700 font-bold py-2 rounded-lg hover:bg-amber-600 hover:border-amber-600 hover:text-white transition flex items-center justify-center gap-2"><i data-lucide="plus" class="w-4 h-4"></i> Ajouter</button></div></div>
+                     <div class="menu-item group relative bg-stone-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition border border-stone-100" data-category="boisson"><div class="h-56 overflow-hidden relative"><img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><button onclick="showDishInfo('Jus de Bissap')" class="absolute top-3 right-3 bg-white/90 p-2 rounded-full text-stone-700 hover:text-amber-600 shadow-md transition"><i data-lucide="info" class="w-4 h-4"></i></button></div><div class="p-5"><div class="flex justify-between items-start mb-2"><h3 class="text-xl font-serif font-bold">Jus de Bissap</h3><span class="text-amber-600 font-bold">1 000 F</span></div><p class="text-stone-500 text-sm mb-4">Infusion d'hibiscus rafraîchissante.</p><button onclick="addToCart(this, 'Jus de Bissap', 1000)" class="w-full bg-white border-2 border-stone-200 text-stone-700 font-bold py-2 rounded-lg hover:bg-amber-600 hover:border-amber-600 hover:text-white transition flex items-center justify-center gap-2"><i data-lucide="plus" class="w-4 h-4"></i> Ajouter</button></div></div>
+                     <div class="menu-item hidden-item hidden group relative bg-stone-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition border border-stone-100" data-category="entree"><div class="h-56 overflow-hidden relative"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><button onclick="showDishInfo('Salade Fraîcheur')" class="absolute top-3 right-3 bg-white/90 p-2 rounded-full text-stone-700 hover:text-amber-600 shadow-md transition"><i data-lucide="info" class="w-4 h-4"></i></button></div><div class="p-5"><div class="flex justify-between items-start mb-2"><h3 class="text-xl font-serif font-bold">Salade Fraîcheur</h3><span class="text-amber-600 font-bold">3 000 F</span></div><p class="text-stone-500 text-sm mb-4">Légumes de saison et vinaigrette.</p><button onclick="addToCart(this, 'Salade', 3000)" class="w-full bg-white border-2 border-stone-200 text-stone-700 font-bold py-2 rounded-lg hover:bg-amber-600 hover:border-amber-600 hover:text-white transition flex items-center justify-center gap-2"><i data-lucide="plus" class="w-4 h-4"></i> Ajouter</button></div></div>
+                </div>
+                <div class="text-center mt-12"><button id="see-more-btn" onclick="toggleMoreMenu()" class="bg-stone-100 text-stone-800 hover:bg-amber-600 hover:text-white px-8 py-3 rounded-full font-bold transition shadow-md flex items-center gap-2 mx-auto"><span>Voir plus</span><i data-lucide="chevron-down" class="w-4 h-4"></i></button></div></div>
+        </section>
+
+        <section id="reservation" class="py-20 bg-stone-50 border-t border-stone-200"><div class="container mx-auto px-6 pb-20"><div class="flex flex-col md:flex-row gap-12 items-center"><div class="md:w-1/2"><span class="text-amber-600 font-bold uppercase tracking-wider text-sm">Réservation</span><h2 class="text-4xl font-serif font-bold text-stone-800 mt-2 mb-6">Réservez Votre Table</h2><p class="text-stone-600 mb-8 leading-relaxed">Assurez-vous une place pour une expérience culinaire mémorable.</p><div class="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm border border-stone-100 w-fit"><div class="bg-amber-100 p-3 rounded-full text-amber-600"><i data-lucide="phone-call" class="w-6 h-6"></i></div><div><p class="text-sm text-stone-500">Réservation par téléphone</p><p class="font-bold text-stone-800 text-lg">+221 33 800 00 00</p></div></div></div><div class="md:w-1/2 bg-white p-8 rounded-2xl shadow-xl border border-stone-100 w-full"><form onsubmit="event.preventDefault(); alert('Demande de réservation envoyée !');" class="space-y-6"><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div><label class="block text-sm font-bold text-stone-700 mb-2">Nom</label><input type="text" class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-amber-500 outline-none transition" placeholder="Votre nom"></div><div><label class="block text-sm font-bold text-stone-700 mb-2">Téléphone</label><input type="tel" class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-amber-500 outline-none transition" placeholder="Votre numéro"></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><div><label class="block text-sm font-bold text-stone-700 mb-2">Date</label><input type="date" class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-amber-500 outline-none transition"></div><div><label class="block text-sm font-bold text-stone-700 mb-2">Heure</label><input type="time" class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-amber-500 outline-none transition"></div><div><label class="block text-sm font-bold text-stone-700 mb-2">Personnes</label><select class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-amber-500 outline-none transition"><option>2</option><option>3</option><option>4</option><option>5+</option></select></div></div><button type="submit" class="w-full bg-stone-800 text-white font-bold py-4 rounded-lg hover:bg-stone-900 transition shadow-lg">Confirmer la Réservation</button></form></div></div></div></section>
+
+        <section id="avis" class="py-20 bg-white border-t border-stone-200">
+            <div class="container mx-auto px-6 pb-20">
+                <div class="text-center mb-12"><span class="text-amber-600 font-bold uppercase tracking-wider text-sm">Témoignages</span><h2 class="text-4xl font-serif font-bold text-stone-800 mt-2">Ce que disent nos clients</h2></div>
+                <div class="max-w-2xl mx-auto bg-stone-50 p-8 rounded-2xl shadow-md mb-16 relative"><h3 class="text-2xl font-bold text-stone-800 mb-6 text-center">Laisser un avis</h3><form onsubmit="submitReview(event)"><div class="flex justify-center gap-2 mb-6" id="star-rating"><i data-lucide="star" class="w-8 h-8 star-btn" onclick="rate(1)"></i><i data-lucide="star" class="w-8 h-8 star-btn" onclick="rate(2)"></i><i data-lucide="star" class="w-8 h-8 star-btn" onclick="rate(3)"></i><i data-lucide="star" class="w-8 h-8 star-btn" onclick="rate(4)"></i><i data-lucide="star" class="w-8 h-8 star-btn" onclick="rate(5)"></i></div><input type="hidden" id="rating-input" required><div class="mb-4"><input type="text" id="review-name" placeholder="Votre nom" class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:border-amber-500 outline-none" required></div><div class="mb-4 relative"><textarea id="review-message" rows="3" placeholder="Votre message..." class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:border-amber-500 outline-none" required></textarea></div><button type="submit" class="w-full bg-amber-600 text-white font-bold py-3 rounded-lg hover:bg-amber-700 transition">Publier l'avis</button></form></div>
+                <div id="reviews-list" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                     <div class="bg-stone-50 p-6 rounded-xl shadow-sm"><div class="flex text-amber-500 mb-3"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div><p class="text-stone-600 mb-4 italic">"Le Thieboudienne est excellent, je recommande !"</p><h4 class="font-bold text-stone-800">- Aminata D.</h4></div>
+                     <div class="bg-stone-50 p-6 rounded-xl shadow-sm"><div class="flex text-amber-500 mb-3"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4"></i></div><p class="text-stone-600 mb-4 italic">"Service impeccable et ambiance chaleureuse."</p><h4 class="font-bold text-stone-800">- Moussa S.</h4></div>
+                     <div class="bg-stone-50 p-6 rounded-xl shadow-sm"><div class="flex text-amber-500 mb-3"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div><p class="text-stone-600 mb-4 italic">"Les saveurs sont authentiques, un vrai voyage."</p><h4 class="font-bold text-stone-800">- Sophie T.</h4></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- === PAGE PANIER (Plein Écran) === -->
+    <div id="page-panier" class="page-section">
+        <section class="internal-page-padding bg-stone-50 min-h-screen">
+            <div class="container mx-auto px-6 pb-20">
+                <h2 class="text-3xl font-serif font-bold text-center mb-10 text-amber-700">Votre Panier</h2>
+                <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl border border-stone-200 overflow-hidden">
+                    <div id="full-cart-items" class="p-6 space-y-6"><p class="text-center text-stone-500 py-10">Votre panier est vide.</p></div>
+                    <div class="bg-stone-50 p-6 border-t border-stone-200">
+                        <div class="flex justify-between items-center text-xl font-bold mb-6"><span>Total</span><span id="full-cart-total" class="text-amber-600">0 FCFA</span></div>
+                        <div class="flex gap-4 flex-col md:flex-row"><button onclick="showPage('home')" class="flex-1 py-3 rounded-lg border border-stone-300 text-stone-600 font-bold hover:bg-white transition">Continuer mes achats</button><button onclick="showPage('checkout')" id="full-checkout-btn" disabled class="flex-1 bg-amber-600 text-white py-3 rounded-lg font-bold hover:bg-amber-700 transition disabled:opacity-50 disabled:cursor-not-allowed">Passer la commande</button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- === PAGE CAISSE (Formulaire) === -->
+    <div id="page-checkout" class="page-section">
+        <section class="internal-page-padding bg-stone-50 min-h-screen">
+            <div class="container mx-auto px-6 pb-20">
+                <h2 class="text-3xl font-serif font-bold text-center mb-10 text-amber-700">Finaliser la Commande</h2>
+                <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl border border-stone-200 overflow-hidden p-6 md:p-8">
+                    <form onsubmit="event.preventDefault(); showPage('confirmation'); updateConfirmationPage();" class="space-y-6">
+                        <input type="hidden" id="order-type" value="Livraison">
+                        <div><label class="block text-sm font-bold text-stone-700 mb-2">Nom (Optionnel)</label><input type="text" id="checkout-name" class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:ring-2 focus:ring-amber-500 outline-none text-stone-800" placeholder="Votre nom"></div>
+                        <div><label class="block text-sm font-bold text-stone-700 mb-2">Numéro de téléphone</label><div class="flex"><span class="inline-flex items-center px-4 py-3 rounded-l-lg border border-r-0 border-stone-200 bg-stone-100 text-stone-500 font-bold">🇸🇳 +221</span><input type="tel" id="checkout-phone" required class="w-full px-4 py-3 rounded-r-lg bg-stone-50 border border-stone-200 focus:ring-2 focus:ring-amber-500 outline-none text-stone-800" placeholder="77 000 00 00"></div></div>
+                        <div id="delivery-fields"><div class="mb-6"><label class="block text-sm font-bold text-stone-700 mb-2">Zone de livraison *</label><select id="checkout-zone" class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:ring-2 focus:ring-amber-500 outline-none text-stone-800"><option value="">Sélectionnez une zone</option><option value="Dakar Plateau">Dakar Plateau</option><option value="Medina">Médina</option><option value="Fann">Fann / Point E</option><option value="Mermoz">Mermoz / Sacré Cœur</option><option value="Almadies">Almadies / Ngor</option><option value="Yoff">Yoff</option><option value="Parcelles">Parcelles Assainies</option><option value="Guediawaye">Guédiawaye</option><option value="Pikine">Pikine</option></select></div><div><label class="block text-sm font-bold text-stone-700 mb-2">Adresse de livraison *</label><textarea id="checkout-address" rows="2" class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:ring-2 focus:ring-amber-500 outline-none text-stone-800 resize-none" placeholder="Votre adresse complète (Quartier, repère...)"></textarea></div></div>
+                        <div><label class="block text-sm font-bold text-stone-700 mb-2">Vos indications (Optionnel)</label><textarea id="checkout-notes" rows="2" class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:ring-2 focus:ring-amber-500 outline-none text-stone-800 resize-none" placeholder="Ex: Pas de piment, code porte..."></textarea></div>
+                        
+                        <!-- Articles commandés (Récap) -->
+                        <div class="mt-8 border-t border-stone-100 pt-6">
+                             <h4 class="font-bold text-stone-800 mb-4">Articles commandés</h4>
+                             <div id="checkout-items-list" class="space-y-2 text-sm text-stone-600 mb-4"></div>
+                             
+                             <!-- Pourboire -->
+                             <div class="mb-4">
+                                 <label class="block text-sm font-bold text-stone-700 mb-2">Pourboire</label>
+                                 <div class="flex gap-2">
+                                     <button type="button" onclick="setTip(0)" class="tip-btn px-3 py-1 rounded-full border border-stone-200 text-xs font-bold active bg-amber-600 text-white">Aucun</button>
+                                     <button type="button" onclick="setTip(3)" class="tip-btn px-3 py-1 rounded-full border border-stone-200 text-xs font-bold text-stone-500 hover:border-amber-500">3%</button>
+                                     <button type="button" onclick="setTip(5)" class="tip-btn px-3 py-1 rounded-full border border-stone-200 text-xs font-bold text-stone-500 hover:border-amber-500">5%</button>
+                                     <button type="button" onclick="setTip(7)" class="tip-btn px-3 py-1 rounded-full border border-stone-200 text-xs font-bold text-stone-500 hover:border-amber-500">7%</button>
+                                     <button type="button" onclick="setTip(10)" class="tip-btn px-3 py-1 rounded-full border border-stone-200 text-xs font-bold text-stone-500 hover:border-amber-500">10%</button>
+                                 </div>
+                             </div>
+                             
+                             <div class="space-y-1 text-sm border-t border-stone-100 pt-2">
+                                 <div class="flex justify-between"><span>Sous-total</span><span id="checkout-subtotal">0 FCFA</span></div>
+                                 <div class="flex justify-between" id="checkout-delivery-row"><span>Livraison</span><span id="checkout-delivery-cost">0 FCFA</span></div>
+                                 <div class="flex justify-between"><span>Pourboire</span><span id="checkout-tip">0 FCFA</span></div>
+                                 <div class="flex justify-between font-bold text-lg text-amber-700 mt-2"><span>Total</span><span id="checkout-total">0 FCFA</span></div>
+                             </div>
+                        </div>
+                        
+                        <div class="flex gap-4 pt-4"><button type="button" onclick="showPage('panier')" class="w-1/3 py-3 rounded-lg border border-stone-300 text-stone-600 font-bold hover:bg-stone-50 transition">Retour</button><button type="submit" class="w-2/3 bg-amber-600 text-white py-3 rounded-lg font-bold hover:bg-amber-700 transition shadow-lg flex items-center justify-center gap-2">Suivant <i data-lucide="arrow-right" class="w-4 h-4"></i></button></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- === PAGE CONFIRMATION (NOUVEAU) === -->
+    <div id="page-confirmation" class="page-section">
+        <section class="internal-page-padding bg-stone-50 min-h-screen">
+            <div class="container mx-auto px-6 pb-20">
+                <h2 class="text-3xl font-serif font-bold text-center mb-10 text-amber-700">Confirmation</h2>
+                <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl border border-stone-200 overflow-hidden p-6 md:p-8">
+                    
+                    <!-- Recap Final -->
+                    <div class="mb-8">
+                         <h3 class="font-bold text-lg text-stone-800 mb-4 border-b border-stone-100 pb-2">Résumé de la commande</h3>
+                         <div id="conf-details" class="text-sm text-stone-600 space-y-2 mb-4">
+                             <!-- Details filled by JS -->
+                         </div>
+                         <div id="conf-items" class="space-y-2 mb-4 border-t border-stone-100 pt-4"></div>
+                         <div class="flex justify-between font-bold text-xl text-amber-700 border-t border-stone-200 pt-4">
+                             <span>Total à payer</span>
+                             <span id="conf-total">0 FCFA</span>
+                         </div>
+                    </div>
+
+                    <!-- Mode de Paiement -->
+                    <h4 class="font-bold text-stone-800 mb-4 flex items-center gap-2"><i data-lucide="credit-card" class="w-5 h-5 text-amber-600"></i> Mode de paiement</h4>
+                    <div class="space-y-3 mb-8">
+                        <label class="flex items-center justify-between p-4 border rounded-xl cursor-pointer transition hover:border-amber-500 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50">
+                            <div class="flex items-center gap-3"><input type="radio" name="payment" value="livraison" class="payment-radio hidden" checked><div class="w-5 h-5 rounded-full border-2 border-stone-300 flex items-center justify-center radio-circle bg-white"></div><span class="font-bold text-stone-700">Paiement à la livraison</span></div><i data-lucide="banknote" class="w-5 h-5 text-stone-400"></i>
+                        </label>
+                        <label class="flex items-center justify-between p-4 border rounded-xl cursor-pointer transition hover:border-amber-500 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50">
+                            <div class="flex items-center gap-3"><input type="radio" name="payment" value="wave" class="payment-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-stone-300 flex items-center justify-center radio-circle bg-white"></div><span class="font-bold text-stone-700">Payer avec Wave</span></div><div class="bg-blue-100 text-blue-600 text-xs font-bold px-2 py-1 rounded">WAVE</div>
+                        </label>
+                    </div>
+
+                    <button onclick="confirmOrder()" class="w-full bg-amber-600 text-white py-4 rounded-xl font-bold hover:bg-amber-700 transition shadow-lg flex items-center justify-center gap-2 text-lg">Confirmer la commande <i data-lucide="check-circle" class="w-5 h-5"></i></button>
+                    <button onclick="showPage('checkout')" class="w-full text-stone-500 font-bold py-3 mt-2 hover:text-stone-700 transition text-sm">Retour</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ECRAN SUCCES -->
+    <div id="success-screen" class="hidden fixed inset-0 z-50 bg-stone-50 flex flex-col items-center justify-center text-center p-6">
+        <div class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mb-6 success-icon">
+            <i data-lucide="check" class="w-12 h-12 text-green-600"></i>
+        </div>
+        <h2 class="text-3xl font-serif font-bold text-stone-800 mb-4">Commande Confirmée !</h2>
+        <p class="text-stone-600 mb-8 max-w-md">Votre commande a été enregistrée avec succès. Nous la préparons avec soin.</p>
+        <button onclick="finishOrder()" class="bg-amber-600 text-white px-8 py-3 rounded-full font-bold hover:bg-amber-700 transition shadow-lg">Continuer mes achats</button>
+    </div>
+
+    <!-- PAGE MODAL GENERIQUE -->
+    <div id="page-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-4xl mx-4 overflow-hidden h-[90vh] flex flex-col relative animate-fade-in">
+            <button onclick="closePageModal()" class="absolute top-4 right-4 z-10 bg-white/80 p-2 rounded-full text-stone-600 hover:bg-stone-100 shadow-sm"><i data-lucide="x" class="w-6 h-6"></i></button>
+            <div id="page-modal-content" class="overflow-y-auto p-8 h-full"></div>
+        </div>
+    </div>
+
+    <!-- BOUTONS FLOTTANTS -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4">
+        <div class="fab-container relative">
+            <div class="fab-options flex flex-col gap-3 items-end absolute bottom-0 right-0 mb-16 w-48">
+                <button onclick="toggleChat()" class="bg-white text-stone-800 px-4 py-2 rounded-full shadow-lg font-bold flex items-center gap-2 hover:bg-stone-50 transition border border-stone-200 w-full justify-end"><span>Assistant IA</span><div class="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white"><i data-lucide="bot" class="w-4 h-4"></i></div></button>
+                <a href="https://wa.me/221771234567" target="_blank" class="bg-white text-stone-800 px-4 py-2 rounded-full shadow-lg font-bold flex items-center gap-2 hover:bg-stone-50 transition border border-stone-200 w-full justify-end"><span>WhatsApp</span><div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white"><i data-lucide="message-circle" class="w-4 h-4"></i></div></a>
+            </div>
+            <button class="w-16 h-16 bg-amber-600 rounded-full shadow-2xl flex items-center justify-center text-white hover:bg-amber-700 transition duration-300 transform hover:scale-110"><i data-lucide="message-square-more" class="w-8 h-8"></i></button>
+        </div>
+    </div>
+
+    <!-- MODAL CHATBOT IA -->
+    <div id="ai-chat" class="chat-box fixed bottom-24 right-6 w-80 bg-white rounded-2xl shadow-2xl border border-stone-200 flex-col overflow-hidden z-50 h-96">
+        <div class="bg-indigo-600 p-4 text-white flex justify-between items-center"><div class="flex items-center gap-2"><i data-lucide="bot" class="w-5 h-5"></i><span class="font-bold">Assistant Coumba</span></div><button onclick="toggleChat()" class="hover:text-indigo-200"><i data-lucide="x" class="w-5 h-5"></i></button></div>
+        <div class="p-4 flex-1 overflow-y-auto bg-stone-50 space-y-3 text-sm" id="chat-messages"><div class="bg-white p-3 rounded-lg rounded-tl-none border border-stone-200 self-start shadow-sm">Bonjour ! Je suis l'IA de Coumba Restau. Posez-moi une question sur le menu ou les plats ! 🤖✨</div></div>
+        <div class="p-3 border-t border-stone-200 flex gap-2 bg-white"><input type="text" id="chat-input" placeholder="Ex: Le plat le plus épicé ?" class="flex-1 px-3 py-2 rounded-lg border text-sm outline-none" onkeypress="if(event.key === 'Enter') sendMessage()"><button onclick="sendMessage()" class="bg-indigo-600 text-white p-2 rounded-lg hover:bg-indigo-700 transition"><i data-lucide="send" class="w-4 h-4"></i></button></div>
+    </div>
+
+    <!-- MODAL INFO CULTURELLE IA -->
+    <div id="info-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md mx-4 overflow-hidden">
+            <div class="bg-amber-100 p-6 text-center border-b border-amber-200"><div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white mx-auto mb-3 shadow-lg"><i data-lucide="book-open" class="w-6 h-6"></i></div><h3 class="text-xl font-serif font-bold text-amber-900" id="info-dish-title">Titre du Plat</h3><p class="text-amber-700 text-xs mt-1 uppercase tracking-widest">Culture & Histoire</p></div>
+            <div class="p-6"><div id="info-content" class="prose prose-sm text-stone-700"></div><button onclick="closeInfoModal()" class="w-full mt-6 bg-stone-800 text-white py-3 rounded-lg font-bold hover:bg-stone-900 transition">Fermer</button></div>
+        </div>
+    </div>
+
+    <!-- FOOTER (ORANGE) -->
+    <footer class="bg-amber-600 text-white py-16 pb-28 md:pb-16">
+        <div class="container mx-auto px-6 text-center flex flex-col items-center gap-6">
+            <h2 class="text-3xl font-bold font-serif tracking-wide text-white">Coumba Restau</h2>
+            <div class="flex flex-col items-center gap-4"><span class="text-white/90 font-medium uppercase tracking-wider text-sm">Suivez-nous</span><div class="flex gap-8 justify-center"><a href="#" class="text-white hover:text-stone-200 transition transform hover:scale-110"><i data-lucide="facebook" class="w-7 h-7"></i></a><a href="#" class="text-white hover:text-stone-200 transition transform hover:scale-110"><i data-lucide="instagram" class="w-7 h-7"></i></a><a href="#" class="text-white hover:text-stone-200 transition transform hover:scale-110"><svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.03 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a href="#" class="text-white hover:text-stone-200 transition transform hover:scale-110"><i data-lucide="youtube" class="w-7 h-7"></i></a></div></div>
+            <div class="flex items-center gap-6 mt-4 text-sm font-medium text-white/90"><button onclick="openPageModal('mentions')" class="hover:underline transition">Mentions légales</button><button onclick="openPageModal('politique')" class="hover:underline transition">Politique de confidentialité</button><button onclick="openPageModal('apropos')" class="hover:underline transition">À propos de nous</button></div>
+            <div class="mt-4 text-white/70 text-sm"><p>© 2025 Coumba Restau - Tout droit réservés</p></div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        let cart = [];
+        let currentTipPercent = 0;
+        
+        const apiKey = ""; 
+        const SYSTEM_PROMPT = "Tu es l'assistant expert du restaurant Coumba Restau...";
+        const pageContents = {traiteur:`<h2 class="text-3xl font-bold text-center mb-6">Traiteur</h2><p class="text-center">Contactez-nous pour vos événements.</p>`, galerie:`<h2 class="text-3xl font-bold text-center mb-6">Galerie</h2><p class="text-center">Nos plats en images.</p>`, carrieres:`<h2 class="text-3xl font-bold text-center mb-6">Carrières</h2><p class="text-center">Rejoignez-nous !</p>`, compte:`<h2 class="text-3xl font-bold text-center mb-6">Mon Compte</h2><p class="text-center">Espace membre.</p>`, mentions:`<h2 class="text-3xl font-bold mb-6">Mentions Légales</h2>`, politique:`<h2 class="text-3xl font-bold mb-6">Politique de Confidentialité</h2>`, apropos:`<h2 class="text-3xl font-bold mb-6">À Propos</h2>`};
+        function openPageModal(k){document.getElementById('page-modal-content').innerHTML=pageContents[k];document.getElementById('page-modal').classList.remove('hidden');}
+        function closePageModal(){document.getElementById('page-modal').classList.add('hidden');}
+
+        function showPage(pageId) {
+            if(pageId==='home'||pageId==='menu'||pageId==='reservation'||pageId==='avis'){
+                 document.getElementById('page-home').classList.add('active'); 
+                 ['page-panier','page-checkout','page-confirmation'].forEach(id=>document.getElementById(id).classList.remove('active'));
+                 setTimeout(()=>{const el=document.getElementById(pageId==='home'?'accueil':pageId);if(el)el.scrollIntoView({behavior:'smooth'});},10);
+                 document.getElementById('navbar').classList.add('nav-transparent'); document.getElementById('navbar').classList.remove('nav-scrolled');
+            } else {
+                document.querySelectorAll('.page-section').forEach(el=>el.classList.remove('active'));
+                document.getElementById('page-'+pageId).classList.add('active'); window.scrollTo(0,0);
+                document.getElementById('navbar').classList.remove('nav-transparent'); document.getElementById('navbar').classList.add('nav-scrolled');
+            }
+            document.getElementById('mobile-menu').classList.add('hidden');
+            
+            // Init checkout items if opening checkout
+            if(pageId === 'checkout') updateCheckoutTotals();
+        }
+
+        // --- CHECKOUT & TIP LOGIC ---
+        function setTip(percent) {
+            currentTipPercent = percent;
+            document.querySelectorAll('.tip-btn').forEach(btn => {
+                btn.classList.remove('active','bg-amber-600','text-white');
+                btn.classList.add('text-stone-500');
+            });
+            // Find clicked button (simple logic based on onclick)
+            event.target.classList.add('active','bg-amber-600','text-white');
+            event.target.classList.remove('text-stone-500');
+            updateCheckoutTotals();
+        }
+
+        function updateCheckoutTotals() {
+            const list = document.getElementById('checkout-items-list');
+            list.innerHTML = '';
+            let subtotal = 0;
+            cart.forEach(item => {
+                subtotal += item.price;
+                list.innerHTML += `<div class="flex justify-between"><span>${item.name}</span><span>${item.price} FCFA</span></div>`;
+            });
+            
+            const deliveryCost = document.getElementById('order-type').value === 'livraison' ? 1500 : 0; // Exemple 1500F
+            const tipAmount = Math.round(subtotal * (currentTipPercent / 100));
+            const total = subtotal + deliveryCost + tipAmount;
+
+            document.getElementById('checkout-subtotal').innerText = subtotal + ' FCFA';
+            document.getElementById('checkout-delivery-cost').innerText = deliveryCost + ' FCFA';
+            document.getElementById('checkout-tip').innerText = tipAmount + ' FCFA';
+            document.getElementById('checkout-total').innerText = total + ' FCFA';
+            
+            // Hide delivery row if not delivery
+             document.getElementById('checkout-delivery-row').style.display = deliveryCost > 0 ? 'flex' : 'none';
+        }
+
+        function updateConfirmationPage() {
+            const name = document.getElementById('checkout-name').value || 'Client';
+            const phone = document.getElementById('checkout-phone').value;
+            const address = document.getElementById('checkout-address').value;
+            const type = document.getElementById('order-type').value;
+            
+            let detailsHtml = `<p><strong>Nom:</strong> ${name}</p><p><strong>Tél:</strong> ${phone}</p>`;
+            if(type === 'livraison') detailsHtml += `<p><strong>Adresse:</strong> ${address}</p>`;
+            document.getElementById('conf-details').innerHTML = detailsHtml;
+            
+            const itemsContainer = document.getElementById('conf-items');
+            itemsContainer.innerHTML = '';
+            let subtotal = 0;
+            cart.forEach(item => {
+                subtotal += item.price;
+                itemsContainer.innerHTML += `<div class="flex justify-between text-sm"><span>${item.name}</span><span>${item.price} FCFA</span></div>`;
+            });
+            
+            const deliveryCost = type === 'livraison' ? 1500 : 0;
+            const tipAmount = Math.round(subtotal * (currentTipPercent / 100));
+            const total = subtotal + deliveryCost + tipAmount;
+            
+            // Add summary lines to confirmation
+            itemsContainer.innerHTML += `<div class="border-t border-stone-100 mt-2 pt-2 flex justify-between text-xs text-stone-500"><span>Livraison</span><span>${deliveryCost} FCFA</span></div>`;
+            itemsContainer.innerHTML += `<div class="flex justify-between text-xs text-stone-500"><span>Pourboire</span><span>${tipAmount} FCFA</span></div>`;
+            
+            document.getElementById('conf-total').innerText = total + ' FCFA';
+        }
+
+        function confirmOrder() {
+             document.getElementById('success-screen').classList.remove('hidden');
+        }
+        function finishOrder() {
+            cart = []; updateCartUI();
+            document.getElementById('success-screen').classList.add('hidden');
+            showPage('home');
+        }
+
+        // --- Standard Functions ---
+        function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('hidden'); }
+        function toggleCart() { showPage('panier'); }
+        function addToCart(b,n,p){const i=b.closest('.menu-item').querySelector('img').src;cart.push({name:n,price:p,img:i});updateCartUI();document.getElementById('header-cart-count').classList.add('scale-125');setTimeout(()=>document.getElementById('header-cart-count').classList.remove('scale-125'),200);}
+        function removeFromCart(i){cart.splice(i,1);updateCartUI();}
+        function updateCartUI(){
+            const c=document.getElementById('full-cart-items');const t=document.getElementById('full-cart-total');const b=document.getElementById('full-checkout-btn');
+            document.getElementById('header-cart-count').textContent=cart.length;
+            c.innerHTML='';let tot=0;
+            if(cart.length===0){c.innerHTML='<p class="text-center text-stone-500 py-10">Vide</p>';b.disabled=true;}
+            else{cart.forEach((item,i)=>{tot+=item.price;c.innerHTML+=`<div class="flex gap-4 items-center bg-white p-4 rounded-xl border border-stone-100 shadow-sm relative"><img src="${item.img}" class="w-20 h-20 rounded-lg object-cover"><div class="flex-1"><h4 class="font-bold text-stone-800">${item.name}</h4><p class="text-amber-600 font-bold">${item.price} FCFA</p></div><button onclick="removeFromCart(${i})" class="absolute top-4 right-4 text-stone-400 hover:text-red-500 bg-stone-50 p-2 rounded-full"><i data-lucide="trash-2" class="w-5 h-5"></i></button></div>`;});b.disabled=false;}
+            t.textContent=tot+' FCFA';lucide.createIcons();
+        }
+        function checkoutWhatsApp(){showPage('checkout');} // Button in cart goes to checkout page
+        function filterMenu(c){document.querySelectorAll('.menu-tab').forEach(b=>{b.classList.remove('bg-amber-600','text-white');b.classList.add('text-stone-600');});event.target.classList.add('bg-amber-600','text-white');document.querySelectorAll('.menu-item').forEach(i=>{if(c==='all'){if(i.classList.contains('hidden-item'))i.classList.add('hidden');else i.classList.remove('hidden');document.getElementById('see-more-btn').style.display='flex';}else{if(i.dataset.category===c)i.classList.remove('hidden');else i.classList.add('hidden');document.getElementById('see-more-btn').style.display='none';}});}
+        function toggleMoreMenu(){const h=document.querySelectorAll('.hidden-item');const t=document.querySelector('#see-more-btn span');const i=document.querySelector('#see-more-btn i');if(h[0].classList.contains('hidden')){h.forEach(x=>{x.classList.remove('hidden');x.classList.add('animate-fade-in');});t.textContent="Voir moins";i.setAttribute('data-lucide','chevron-up');}else{h.forEach(x=>{x.classList.add('hidden');x.classList.remove('animate-fade-in');});t.textContent="Voir plus";i.setAttribute('data-lucide','chevron-down');}}
+        function toggleChat(){document.getElementById('ai-chat').classList.toggle('active');}
+        async function showDishInfo(n){document.getElementById('info-modal').classList.remove('hidden');document.getElementById('info-content').innerHTML='...';const r=await callGemini("Info sur "+n);document.getElementById('info-content').innerHTML=marked.parse(r);}
+        function closeInfoModal(){document.getElementById('info-modal').classList.add('hidden');}
+        async function callGemini(t){try{const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({contents:[{role:"user",parts:[{text:SYSTEM_PROMPT+"\nUser:"+t}]}]})});const d=await r.json();return d.candidates[0].content.parts[0].text;}catch{return"Erreur";}}
+        async function sendMessage(){const i=document.getElementById('chat-input');const t=i.value;if(!t)return;document.getElementById('chat-messages').innerHTML+=`<div class="bg-indigo-100 p-2 rounded-lg self-end text-right mb-2 max-w-[85%] shadow-sm">${t}</div>`;i.value='';const r=await callGemini(t);document.getElementById('chat-messages').innerHTML+=`<div class="bg-white p-3 rounded-lg self-start mb-2 max-w-[85%] shadow-sm prose prose-sm">${marked.parse(r)}</div>`;}
+        function submitReview(e){e.preventDefault();alert("Avis envoyé !");}
+        function rate(n){/* rating logic */}
+
+        // Order Type Logic
+        function setOrderType(type) {
+            document.querySelectorAll('.order-type-btn').forEach(btn => { btn.classList.remove('active', 'bg-amber-50', 'border-amber-600', 'text-amber-700'); btn.classList.add('border-stone-200', 'text-stone-500'); });
+            const activeBtn = document.getElementById('btn-' + type); activeBtn.classList.add('active', 'bg-amber-50', 'border-amber-600', 'text-amber-700'); activeBtn.classList.remove('border-stone-200', 'text-stone-500');
+            document.getElementById('order-type').value = type;
+            const df = document.getElementById('delivery-fields');
+            if(type==='livraison') df.classList.remove('hidden'); else df.classList.add('hidden');
+            updateCheckoutTotals(); // Update totals because delivery cost might change
+        }
+
+        window.addEventListener('scroll',()=>{if(!document.getElementById('page-home').classList.contains('active'))return;const n=document.getElementById('navbar');if(window.scrollY>50){n.classList.remove('nav-transparent');n.classList.add('nav-scrolled');}else{n.classList.add('nav-transparent');n.classList.remove('nav-scrolled');}});
+    </script>
+</body>
+</html>
