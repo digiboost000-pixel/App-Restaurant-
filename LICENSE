@@ -1,674 +1,463 @@
-                    GNU GENERAL PUBLIC LICENSE
-                       Version 3, 29 June 2007
-
- Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
- Everyone is permitted to copy and distribute verbatim copies
- of this license document, but changing it is not allowed.
-
-                            Preamble
-
-  The GNU General Public License is a free, copyleft license for
-software and other kinds of works.
-
-  The licenses for most software and other practical works are designed
-to take away your freedom to share and change the works.  By contrast,
-the GNU General Public License is intended to guarantee your freedom to
-share and change all versions of a program--to make sure it remains free
-software for all its users.  We, the Free Software Foundation, use the
-GNU General Public License for most of our software; it applies also to
-any other work released this way by its authors.  You can apply it to
-your programs, too.
-
-  When we speak of free software, we are referring to freedom, not
-price.  Our General Public Licenses are designed to make sure that you
-have the freedom to distribute copies of free software (and charge for
-them if you wish), that you receive source code or can get it if you
-want it, that you can change the software or use pieces of it in new
-free programs, and that you know you can do these things.
-
-  To protect your rights, we need to prevent others from denying you
-these rights or asking you to surrender the rights.  Therefore, you have
-certain responsibilities if you distribute copies of the software, or if
-you modify it: responsibilities to respect the freedom of others.
-
-  For example, if you distribute copies of such a program, whether
-gratis or for a fee, you must pass on to the recipients the same
-freedoms that you received.  You must make sure that they, too, receive
-or can get the source code.  And you must show them these terms so they
-know their rights.
-
-  Developers that use the GNU GPL protect your rights with two steps:
-(1) assert copyright on the software, and (2) offer you this License
-giving you legal permission to copy, distribute and/or modify it.
-
-  For the developers' and authors' protection, the GPL clearly explains
-that there is no warranty for this free software.  For both users' and
-authors' sake, the GPL requires that modified versions be marked as
-changed, so that their problems will not be attributed erroneously to
-authors of previous versions.
-
-  Some devices are designed to deny users access to install or run
-modified versions of the software inside them, although the manufacturer
-can do so.  This is fundamentally incompatible with the aim of
-protecting users' freedom to change the software.  The systematic
-pattern of such abuse occurs in the area of products for individuals to
-use, which is precisely where it is most unacceptable.  Therefore, we
-have designed this version of the GPL to prohibit the practice for those
-products.  If such problems arise substantially in other domains, we
-stand ready to extend this provision to those domains in future versions
-of the GPL, as needed to protect the freedom of users.
-
-  Finally, every program is threatened constantly by software patents.
-States should not allow patents to restrict development and use of
-software on general-purpose computers, but in those that do, we wish to
-avoid the special danger that patents applied to a free program could
-make it effectively proprietary.  To prevent this, the GPL assures that
-patents cannot be used to render the program non-free.
-
-  The precise terms and conditions for copying, distribution and
-modification follow.
-
-                       TERMS AND CONDITIONS
-
-  0. Definitions.
-
-  "This License" refers to version 3 of the GNU General Public License.
-
-  "Copyright" also means copyright-like laws that apply to other kinds of
-works, such as semiconductor masks.
-
-  "The Program" refers to any copyrightable work licensed under this
-License.  Each licensee is addressed as "you".  "Licensees" and
-"recipients" may be individuals or organizations.
-
-  To "modify" a work means to copy from or adapt all or part of the work
-in a fashion requiring copyright permission, other than the making of an
-exact copy.  The resulting work is called a "modified version" of the
-earlier work or a work "based on" the earlier work.
-
-  A "covered work" means either the unmodified Program or a work based
-on the Program.
-
-  To "propagate" a work means to do anything with it that, without
-permission, would make you directly or secondarily liable for
-infringement under applicable copyright law, except executing it on a
-computer or modifying a private copy.  Propagation includes copying,
-distribution (with or without modification), making available to the
-public, and in some countries other activities as well.
-
-  To "convey" a work means any kind of propagation that enables other
-parties to make or receive copies.  Mere interaction with a user through
-a computer network, with no transfer of a copy, is not conveying.
-
-  An interactive user interface displays "Appropriate Legal Notices"
-to the extent that it includes a convenient and prominently visible
-feature that (1) displays an appropriate copyright notice, and (2)
-tells the user that there is no warranty for the work (except to the
-extent that warranties are provided), that licensees may convey the
-work under this License, and how to view a copy of this License.  If
-the interface presents a list of user commands or options, such as a
-menu, a prominent item in the list meets this criterion.
-
-  1. Source Code.
-
-  The "source code" for a work means the preferred form of the work
-for making modifications to it.  "Object code" means any non-source
-form of a work.
-
-  A "Standard Interface" means an interface that either is an official
-standard defined by a recognized standards body, or, in the case of
-interfaces specified for a particular programming language, one that
-is widely used among developers working in that language.
-
-  The "System Libraries" of an executable work include anything, other
-than the work as a whole, that (a) is included in the normal form of
-packaging a Major Component, but which is not part of that Major
-Component, and (b) serves only to enable use of the work with that
-Major Component, or to implement a Standard Interface for which an
-implementation is available to the public in source code form.  A
-"Major Component", in this context, means a major essential component
-(kernel, window system, and so on) of the specific operating system
-(if any) on which the executable work runs, or a compiler used to
-produce the work, or an object code interpreter used to run it.
-
-  The "Corresponding Source" for a work in object code form means all
-the source code needed to generate, install, and (for an executable
-work) run the object code and to modify the work, including scripts to
-control those activities.  However, it does not include the work's
-System Libraries, or general-purpose tools or generally available free
-programs which are used unmodified in performing those activities but
-which are not part of the work.  For example, Corresponding Source
-includes interface definition files associated with source files for
-the work, and the source code for shared libraries and dynamically
-linked subprograms that the work is specifically designed to require,
-such as by intimate data communication or control flow between those
-subprograms and other parts of the work.
-
-  The Corresponding Source need not include anything that users
-can regenerate automatically from other parts of the Corresponding
-Source.
-
-  The Corresponding Source for a work in source code form is that
-same work.
-
-  2. Basic Permissions.
-
-  All rights granted under this License are granted for the term of
-copyright on the Program, and are irrevocable provided the stated
-conditions are met.  This License explicitly affirms your unlimited
-permission to run the unmodified Program.  The output from running a
-covered work is covered by this License only if the output, given its
-content, constitutes a covered work.  This License acknowledges your
-rights of fair use or other equivalent, as provided by copyright law.
-
-  You may make, run and propagate covered works that you do not
-convey, without conditions so long as your license otherwise remains
-in force.  You may convey covered works to others for the sole purpose
-of having them make modifications exclusively for you, or provide you
-with facilities for running those works, provided that you comply with
-the terms of this License in conveying all material for which you do
-not control copyright.  Those thus making or running the covered works
-for you must do so exclusively on your behalf, under your direction
-and control, on terms that prohibit them from making any copies of
-your copyrighted material outside their relationship with you.
-
-  Conveying under any other circumstances is permitted solely under
-the conditions stated below.  Sublicensing is not allowed; section 10
-makes it unnecessary.
-
-  3. Protecting Users' Legal Rights From Anti-Circumvention Law.
-
-  No covered work shall be deemed part of an effective technological
-measure under any applicable law fulfilling obligations under article
-11 of the WIPO copyright treaty adopted on 20 December 1996, or
-similar laws prohibiting or restricting circumvention of such
-measures.
-
-  When you convey a covered work, you waive any legal power to forbid
-circumvention of technological measures to the extent such circumvention
-is effected by exercising rights under this License with respect to
-the covered work, and you disclaim any intention to limit operation or
-modification of the work as a means of enforcing, against the work's
-users, your or third parties' legal rights to forbid circumvention of
-technological measures.
-
-  4. Conveying Verbatim Copies.
-
-  You may convey verbatim copies of the Program's source code as you
-receive it, in any medium, provided that you conspicuously and
-appropriately publish on each copy an appropriate copyright notice;
-keep intact all notices stating that this License and any
-non-permissive terms added in accord with section 7 apply to the code;
-keep intact all notices of the absence of any warranty; and give all
-recipients a copy of this License along with the Program.
-
-  You may charge any price or no price for each copy that you convey,
-and you may offer support or warranty protection for a fee.
-
-  5. Conveying Modified Source Versions.
-
-  You may convey a work based on the Program, or the modifications to
-produce it from the Program, in the form of source code under the
-terms of section 4, provided that you also meet all of these conditions:
-
-    a) The work must carry prominent notices stating that you modified
-    it, and giving a relevant date.
-
-    b) The work must carry prominent notices stating that it is
-    released under this License and any conditions added under section
-    7.  This requirement modifies the requirement in section 4 to
-    "keep intact all notices".
-
-    c) You must license the entire work, as a whole, under this
-    License to anyone who comes into possession of a copy.  This
-    License will therefore apply, along with any applicable section 7
-    additional terms, to the whole of the work, and all its parts,
-    regardless of how they are packaged.  This License gives no
-    permission to license the work in any other way, but it does not
-    invalidate such permission if you have separately received it.
-
-    d) If the work has interactive user interfaces, each must display
-    Appropriate Legal Notices; however, if the Program has interactive
-    interfaces that do not display Appropriate Legal Notices, your
-    work need not make them do so.
-
-  A compilation of a covered work with other separate and independent
-works, which are not by their nature extensions of the covered work,
-and which are not combined with it such as to form a larger program,
-in or on a volume of a storage or distribution medium, is called an
-"aggregate" if the compilation and its resulting copyright are not
-used to limit the access or legal rights of the compilation's users
-beyond what the individual works permit.  Inclusion of a covered work
-in an aggregate does not cause this License to apply to the other
-parts of the aggregate.
-
-  6. Conveying Non-Source Forms.
-
-  You may convey a covered work in object code form under the terms
-of sections 4 and 5, provided that you also convey the
-machine-readable Corresponding Source under the terms of this License,
-in one of these ways:
-
-    a) Convey the object code in, or embodied in, a physical product
-    (including a physical distribution medium), accompanied by the
-    Corresponding Source fixed on a durable physical medium
-    customarily used for software interchange.
-
-    b) Convey the object code in, or embodied in, a physical product
-    (including a physical distribution medium), accompanied by a
-    written offer, valid for at least three years and valid for as
-    long as you offer spare parts or customer support for that product
-    model, to give anyone who possesses the object code either (1) a
-    copy of the Corresponding Source for all the software in the
-    product that is covered by this License, on a durable physical
-    medium customarily used for software interchange, for a price no
-    more than your reasonable cost of physically performing this
-    conveying of source, or (2) access to copy the
-    Corresponding Source from a network server at no charge.
-
-    c) Convey individual copies of the object code with a copy of the
-    written offer to provide the Corresponding Source.  This
-    alternative is allowed only occasionally and noncommercially, and
-    only if you received the object code with such an offer, in accord
-    with subsection 6b.
-
-    d) Convey the object code by offering access from a designated
-    place (gratis or for a charge), and offer equivalent access to the
-    Corresponding Source in the same way through the same place at no
-    further charge.  You need not require recipients to copy the
-    Corresponding Source along with the object code.  If the place to
-    copy the object code is a network server, the Corresponding Source
-    may be on a different server (operated by you or a third party)
-    that supports equivalent copying facilities, provided you maintain
-    clear directions next to the object code saying where to find the
-    Corresponding Source.  Regardless of what server hosts the
-    Corresponding Source, you remain obligated to ensure that it is
-    available for as long as needed to satisfy these requirements.
-
-    e) Convey the object code using peer-to-peer transmission, provided
-    you inform other peers where the object code and Corresponding
-    Source of the work are being offered to the general public at no
-    charge under subsection 6d.
-
-  A separable portion of the object code, whose source code is excluded
-from the Corresponding Source as a System Library, need not be
-included in conveying the object code work.
-
-  A "User Product" is either (1) a "consumer product", which means any
-tangible personal property which is normally used for personal, family,
-or household purposes, or (2) anything designed or sold for incorporation
-into a dwelling.  In determining whether a product is a consumer product,
-doubtful cases shall be resolved in favor of coverage.  For a particular
-product received by a particular user, "normally used" refers to a
-typical or common use of that class of product, regardless of the status
-of the particular user or of the way in which the particular user
-actually uses, or expects or is expected to use, the product.  A product
-is a consumer product regardless of whether the product has substantial
-commercial, industrial or non-consumer uses, unless such uses represent
-the only significant mode of use of the product.
-
-  "Installation Information" for a User Product means any methods,
-procedures, authorization keys, or other information required to install
-and execute modified versions of a covered work in that User Product from
-a modified version of its Corresponding Source.  The information must
-suffice to ensure that the continued functioning of the modified object
-code is in no case prevented or interfered with solely because
-modification has been made.
-
-  If you convey an object code work under this section in, or with, or
-specifically for use in, a User Product, and the conveying occurs as
-part of a transaction in which the right of possession and use of the
-User Product is transferred to the recipient in perpetuity or for a
-fixed term (regardless of how the transaction is characterized), the
-Corresponding Source conveyed under this section must be accompanied
-by the Installation Information.  But this requirement does not apply
-if neither you nor any third party retains the ability to install
-modified object code on the User Product (for example, the work has
-been installed in ROM).
-
-  The requirement to provide Installation Information does not include a
-requirement to continue to provide support service, warranty, or updates
-for a work that has been modified or installed by the recipient, or for
-the User Product in which it has been modified or installed.  Access to a
-network may be denied when the modification itself materially and
-adversely affects the operation of the network or violates the rules and
-protocols for communication across the network.
-
-  Corresponding Source conveyed, and Installation Information provided,
-in accord with this section must be in a format that is publicly
-documented (and with an implementation available to the public in
-source code form), and must require no special password or key for
-unpacking, reading or copying.
-
-  7. Additional Terms.
-
-  "Additional permissions" are terms that supplement the terms of this
-License by making exceptions from one or more of its conditions.
-Additional permissions that are applicable to the entire Program shall
-be treated as though they were included in this License, to the extent
-that they are valid under applicable law.  If additional permissions
-apply only to part of the Program, that part may be used separately
-under those permissions, but the entire Program remains governed by
-this License without regard to the additional permissions.
-
-  When you convey a copy of a covered work, you may at your option
-remove any additional permissions from that copy, or from any part of
-it.  (Additional permissions may be written to require their own
-removal in certain cases when you modify the work.)  You may place
-additional permissions on material, added by you to a covered work,
-for which you have or can give appropriate copyright permission.
-
-  Notwithstanding any other provision of this License, for material you
-add to a covered work, you may (if authorized by the copyright holders of
-that material) supplement the terms of this License with terms:
-
-    a) Disclaiming warranty or limiting liability differently from the
-    terms of sections 15 and 16 of this License; or
-
-    b) Requiring preservation of specified reasonable legal notices or
-    author attributions in that material or in the Appropriate Legal
-    Notices displayed by works containing it; or
-
-    c) Prohibiting misrepresentation of the origin of that material, or
-    requiring that modified versions of such material be marked in
-    reasonable ways as different from the original version; or
-
-    d) Limiting the use for publicity purposes of names of licensors or
-    authors of the material; or
-
-    e) Declining to grant rights under trademark law for use of some
-    trade names, trademarks, or service marks; or
-
-    f) Requiring indemnification of licensors and authors of that
-    material by anyone who conveys the material (or modified versions of
-    it) with contractual assumptions of liability to the recipient, for
-    any liability that these contractual assumptions directly impose on
-    those licensors and authors.
-
-  All other non-permissive additional terms are considered "further
-restrictions" within the meaning of section 10.  If the Program as you
-received it, or any part of it, contains a notice stating that it is
-governed by this License along with a term that is a further
-restriction, you may remove that term.  If a license document contains
-a further restriction but permits relicensing or conveying under this
-License, you may add to a covered work material governed by the terms
-of that license document, provided that the further restriction does
-not survive such relicensing or conveying.
-
-  If you add terms to a covered work in accord with this section, you
-must place, in the relevant source files, a statement of the
-additional terms that apply to those files, or a notice indicating
-where to find the applicable terms.
-
-  Additional terms, permissive or non-permissive, may be stated in the
-form of a separately written license, or stated as exceptions;
-the above requirements apply either way.
-
-  8. Termination.
-
-  You may not propagate or modify a covered work except as expressly
-provided under this License.  Any attempt otherwise to propagate or
-modify it is void, and will automatically terminate your rights under
-this License (including any patent licenses granted under the third
-paragraph of section 11).
-
-  However, if you cease all violation of this License, then your
-license from a particular copyright holder is reinstated (a)
-provisionally, unless and until the copyright holder explicitly and
-finally terminates your license, and (b) permanently, if the copyright
-holder fails to notify you of the violation by some reasonable means
-prior to 60 days after the cessation.
-
-  Moreover, your license from a particular copyright holder is
-reinstated permanently if the copyright holder notifies you of the
-violation by some reasonable means, this is the first time you have
-received notice of violation of this License (for any work) from that
-copyright holder, and you cure the violation prior to 30 days after
-your receipt of the notice.
-
-  Termination of your rights under this section does not terminate the
-licenses of parties who have received copies or rights from you under
-this License.  If your rights have been terminated and not permanently
-reinstated, you do not qualify to receive new licenses for the same
-material under section 10.
-
-  9. Acceptance Not Required for Having Copies.
-
-  You are not required to accept this License in order to receive or
-run a copy of the Program.  Ancillary propagation of a covered work
-occurring solely as a consequence of using peer-to-peer transmission
-to receive a copy likewise does not require acceptance.  However,
-nothing other than this License grants you permission to propagate or
-modify any covered work.  These actions infringe copyright if you do
-not accept this License.  Therefore, by modifying or propagating a
-covered work, you indicate your acceptance of this License to do so.
-
-  10. Automatic Licensing of Downstream Recipients.
-
-  Each time you convey a covered work, the recipient automatically
-receives a license from the original licensors, to run, modify and
-propagate that work, subject to this License.  You are not responsible
-for enforcing compliance by third parties with this License.
-
-  An "entity transaction" is a transaction transferring control of an
-organization, or substantially all assets of one, or subdividing an
-organization, or merging organizations.  If propagation of a covered
-work results from an entity transaction, each party to that
-transaction who receives a copy of the work also receives whatever
-licenses to the work the party's predecessor in interest had or could
-give under the previous paragraph, plus a right to possession of the
-Corresponding Source of the work from the predecessor in interest, if
-the predecessor has it or can get it with reasonable efforts.
-
-  You may not impose any further restrictions on the exercise of the
-rights granted or affirmed under this License.  For example, you may
-not impose a license fee, royalty, or other charge for exercise of
-rights granted under this License, and you may not initiate litigation
-(including a cross-claim or counterclaim in a lawsuit) alleging that
-any patent claim is infringed by making, using, selling, offering for
-sale, or importing the Program or any portion of it.
-
-  11. Patents.
-
-  A "contributor" is a copyright holder who authorizes use under this
-License of the Program or a work on which the Program is based.  The
-work thus licensed is called the contributor's "contributor version".
-
-  A contributor's "essential patent claims" are all patent claims
-owned or controlled by the contributor, whether already acquired or
-hereafter acquired, that would be infringed by some manner, permitted
-by this License, of making, using, or selling its contributor version,
-but do not include claims that would be infringed only as a
-consequence of further modification of the contributor version.  For
-purposes of this definition, "control" includes the right to grant
-patent sublicenses in a manner consistent with the requirements of
-this License.
-
-  Each contributor grants you a non-exclusive, worldwide, royalty-free
-patent license under the contributor's essential patent claims, to
-make, use, sell, offer for sale, import and otherwise run, modify and
-propagate the contents of its contributor version.
-
-  In the following three paragraphs, a "patent license" is any express
-agreement or commitment, however denominated, not to enforce a patent
-(such as an express permission to practice a patent or covenant not to
-sue for patent infringement).  To "grant" such a patent license to a
-party means to make such an agreement or commitment not to enforce a
-patent against the party.
-
-  If you convey a covered work, knowingly relying on a patent license,
-and the Corresponding Source of the work is not available for anyone
-to copy, free of charge and under the terms of this License, through a
-publicly available network server or other readily accessible means,
-then you must either (1) cause the Corresponding Source to be so
-available, or (2) arrange to deprive yourself of the benefit of the
-patent license for this particular work, or (3) arrange, in a manner
-consistent with the requirements of this License, to extend the patent
-license to downstream recipients.  "Knowingly relying" means you have
-actual knowledge that, but for the patent license, your conveying the
-covered work in a country, or your recipient's use of the covered work
-in a country, would infringe one or more identifiable patents in that
-country that you have reason to believe are valid.
-
-  If, pursuant to or in connection with a single transaction or
-arrangement, you convey, or propagate by procuring conveyance of, a
-covered work, and grant a patent license to some of the parties
-receiving the covered work authorizing them to use, propagate, modify
-or convey a specific copy of the covered work, then the patent license
-you grant is automatically extended to all recipients of the covered
-work and works based on it.
-
-  A patent license is "discriminatory" if it does not include within
-the scope of its coverage, prohibits the exercise of, or is
-conditioned on the non-exercise of one or more of the rights that are
-specifically granted under this License.  You may not convey a covered
-work if you are a party to an arrangement with a third party that is
-in the business of distributing software, under which you make payment
-to the third party based on the extent of your activity of conveying
-the work, and under which the third party grants, to any of the
-parties who would receive the covered work from you, a discriminatory
-patent license (a) in connection with copies of the covered work
-conveyed by you (or copies made from those copies), or (b) primarily
-for and in connection with specific products or compilations that
-contain the covered work, unless you entered into that arrangement,
-or that patent license was granted, prior to 28 March 2007.
-
-  Nothing in this License shall be construed as excluding or limiting
-any implied license or other defenses to infringement that may
-otherwise be available to you under applicable patent law.
-
-  12. No Surrender of Others' Freedom.
-
-  If conditions are imposed on you (whether by court order, agreement or
-otherwise) that contradict the conditions of this License, they do not
-excuse you from the conditions of this License.  If you cannot convey a
-covered work so as to satisfy simultaneously your obligations under this
-License and any other pertinent obligations, then as a consequence you may
-not convey it at all.  For example, if you agree to terms that obligate you
-to collect a royalty for further conveying from those to whom you convey
-the Program, the only way you could satisfy both those terms and this
-License would be to refrain entirely from conveying the Program.
-
-  13. Use with the GNU Affero General Public License.
-
-  Notwithstanding any other provision of this License, you have
-permission to link or combine any covered work with a work licensed
-under version 3 of the GNU Affero General Public License into a single
-combined work, and to convey the resulting work.  The terms of this
-License will continue to apply to the part which is the covered work,
-but the special requirements of the GNU Affero General Public License,
-section 13, concerning interaction through a network will apply to the
-combination as such.
-
-  14. Revised Versions of this License.
-
-  The Free Software Foundation may publish revised and/or new versions of
-the GNU General Public License from time to time.  Such new versions will
-be similar in spirit to the present version, but may differ in detail to
-address new problems or concerns.
-
-  Each version is given a distinguishing version number.  If the
-Program specifies that a certain numbered version of the GNU General
-Public License "or any later version" applies to it, you have the
-option of following the terms and conditions either of that numbered
-version or of any later version published by the Free Software
-Foundation.  If the Program does not specify a version number of the
-GNU General Public License, you may choose any version ever published
-by the Free Software Foundation.
-
-  If the Program specifies that a proxy can decide which future
-versions of the GNU General Public License can be used, that proxy's
-public statement of acceptance of a version permanently authorizes you
-to choose that version for the Program.
-
-  Later license versions may give you additional or different
-permissions.  However, no additional obligations are imposed on any
-author or copyright holder as a result of your choosing to follow a
-later version.
-
-  15. Disclaimer of Warranty.
-
-  THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY
-APPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT
-HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY
-OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
-THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
-PURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM
-IS WITH YOU.  SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF
-ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
-
-  16. Limitation of Liability.
-
-  IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
-WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS
-THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY
-GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE
-USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF
-DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD
-PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS),
-EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF
-SUCH DAMAGES.
-
-  17. Interpretation of Sections 15 and 16.
-
-  If the disclaimer of warranty and limitation of liability provided
-above cannot be given local legal effect according to their terms,
-reviewing courts shall apply local law that most closely approximates
-an absolute waiver of all civil liability in connection with the
-Program, unless a warranty or assumption of liability accompanies a
-copy of the Program in return for a fee.
-
-                     END OF TERMS AND CONDITIONS
-
-            How to Apply These Terms to Your New Programs
-
-  If you develop a new program, and you want it to be of the greatest
-possible use to the public, the best way to achieve this is to make it
-free software which everyone can redistribute and change under these terms.
-
-  To do so, attach the following notices to the program.  It is safest
-to attach them to the start of each source file to most effectively
-state the exclusion of warranty; and each file should have at least
-the "copyright" line and a pointer to where the full notice is found.
-
-    <one line to give the program's name and a brief idea of what it does.>
-    Copyright (C) <year>  <name of author>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-Also add information on how to contact you by electronic and paper mail.
-
-  If the program does terminal interaction, make it output a short
-notice like this when it starts in an interactive mode:
-
-    <program>  Copyright (C) <year>  <name of author>
-    This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
-    This is free software, and you are welcome to redistribute it
-    under certain conditions; type `show c' for details.
-
-The hypothetical commands `show w' and `show c' should show the appropriate
-parts of the General Public License.  Of course, your program's commands
-might be different; for a GUI interface, you would use an "about box".
-
-  You should also get your employer (if you work as a programmer) or school,
-if any, to sign a "copyright disclaimer" for the program, if necessary.
-For more information on this, and how to apply and follow the GNU GPL, see
-<https://www.gnu.org/licenses/>.
-
-  The GNU General Public License does not permit incorporating your program
-into proprietary programs.  If your program is a subroutine library, you
-may consider it more useful to permit linking proprietary applications with
-the library.  If this is what you want to do, use the GNU Lesser General
-Public License instead of this License.  But first, please read
-<https://www.gnu.org/licenses/why-not-lgpl.html>.
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coumba Restau | Saveurs Authentiques & IA</title>
+    <meta name="description" content="Le meilleur de la cuisine sénégalaise et internationale chez Coumba Restau.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body { font-family: 'Lato', sans-serif; }
+        h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            transition: transform 0.3s ease;
+        }
+        .glass-card:hover { transform: translateY(-3px); background: rgba(255, 255, 255, 0.25); }
+
+        .fab-container:hover .fab-options { transform: scale(1); opacity: 1; pointer-events: all; }
+        .fab-options { transform: scale(0); opacity: 0; transform-origin: bottom right; transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); }
+        .chat-box { display: none; }
+        .chat-box.active { display: flex; }
+        
+        .nav-scrolled { background-color: rgba(255, 255, 255, 0.95); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); color: #44403c !important; }
+.         .nav-transparent { background-color: transparent; color: white; }
+        .nav-transparent a.nav-link { color: white; }
+        .nav-scrolled a.nav-link { color: #57534e; }
+
+        .internal-page-padding { padding-top: 120px; min-height: 80vh; }
+tu
+        #cart-modal { transition: opacity 0.3s ease, transform 0.3s ease; }
+        #cart-modal.hidden-modal { opacity: 0; pointer-events: none; transform: translateY(20px); }
+        #cart-modal.visible-modal { opacity: 1; pointer-events: all; transform: translateY(0); }
+
+        .star-btn:hover, .star-btn.active { fill: #d97706; color: #d97706; transform: scale(1.2); }
+        .star-btn { transition: all 0.2s; cursor: pointer; color: #d6d3d1; }
+
+        .typing-indicator span {
+            display: inline-block; width: 6px; height: 6px; background-color: #4f46e5; border-radius: 50%;
+            animation: typing 1.4s infinite ease-in-out both; margin: 0 1px;
+        }
+        .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
+        .typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+        @keyframes typing { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
+        .prose p { margin-bottom: 0.5em; } .prose strong { color: #d97706; font-weight: 700; }
+
+        .page-section { display: none; animation: fadeIn 0.4s ease-out; }
+        .page-section.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .dropdown-menu { display: none; }
+        .group:hover .dropdown-menu { display: block; animation: slideDown 0.2s ease-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .order-type-btn.active { border-color: #d97706; color: #d97706; background-color: #fffbeb; }
+        .payment-radio:checked + div { border-color: #d97706; background-color: #fffbeb; }
+        .payment-radio:checked + div .radio-circle { border-color: #d97706; border-width: 5px; }
+        
+        /* Style pour les boutons de pourboire */
+        .tip-btn.active { background-color: #d97706; color: white; border-color: #d97706; }
+        
+        /* Animation Succès */
+        .success-icon { animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        @keyframes popIn { from { transform: scale(0) rotate(-45deg); opacity: 0; } to { transform: scale(1) rotate(0); opacity: 1; } }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased relative flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-500 nav-transparent py-4" id="navbar">
+        <div class="container mx-auto px-6 relative flex justify-between items-center h-16">
+            <button id="mobile-menu-btn" onclick="toggleMenu()" class="focus:outline-none text-inherit hover:text-amber-500 transition z-50">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+            <a href="#" onclick="showPage('home')" class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center z-50">
+                <div class="h-16 w-16 rounded-full overflow-hidden border-4 border-white shadow-lg bg-white flex items-center justify-center transform transition hover:scale-105">
+                   <img src="https://res.cloudinary.com/dkvj68ssp/image/upload/v1740243987/1763830581893_x8qg2q.jpg" alt="Logo Coumba Restau" class="w-full h-full object-cover">
+                </div>
+            </a>
+            <button onclick="showPage('panier')" class="relative focus:outline-none text-inherit hover:text-amber-500 transition z-50">
+                <i data-lucide="shopping-bag" class="w-7 h-7"></i>
+                <span id="header-cart-count" class="absolute -top-2 -right-2 bg-amber-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center transform scale-0 transition-transform">0</span>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden bg-white text-stone-800 border-t border-stone-100 absolute w-full shadow-2xl p-6 flex flex-col gap-4 top-full left-0 z-40 max-h-[80vh] overflow-y-auto">
+            <span class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">Navigation</span>
+            <a href="#" onclick="showPage('home'); toggleMenu()" class="hover:text-amber-600 font-medium pl-2 border-l-2 border-transparent hover:border-amber-600 transition">Accueil</a>
+            <a href="#" onclick="showPage('menu'); toggleMenu()" class="hover:text-amber-600 font-medium pl-2 border-l-2 border-transparent hover:border-amber-600 transition">Commander</a>
+            <a href="#" onclick="showPage('reservation'); toggleMenu()" class="hover:text-amber-600 font-medium pl-2 border-l-2 border-transparent hover:border-amber-600 transition">Réserver</a>
+            <a href="#" onclick="showPage('avis'); toggleMenu()" class="hover:text-amber-600 font-medium pl-2 border-l-2 border-transparent hover:border-amber-600 transition">Avis Clients</a>
+            <div class="h-px bg-stone-100 my-2"></div>
+            <span class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">Plus d'options</span>
+            <button onclick="openPageModal('traiteur'); toggleMenu()" class="flex items-center gap-3 hover:text-amber-600 transition py-1 w-full text-left"><i data-lucide="chef-hat" class="w-4 h-4"></i> <span>Traiteur</span></button>
+            <button onclick="openPageModal('galerie'); toggleMenu()" class="flex items-center gap-3 hover:text-amber-600 transition py-1 w-full text-left"><i data-lucide="image" class="w-4 h-4"></i> <span>Galerie</span></button>
+            <button onclick="openPageModal('carrieres'); toggleMenu()" class="flex items-center gap-3 hover:text-amber-600 transition py-1 w-full text-left"><i data-lucide="briefcase" class="w-4 h-4"></i> <span>Carrières</span></button>
+            <button onclick="openPageModal('compte'); toggleMenu()" class="flex items-center gap-3 hover:text-amber-600 transition py-1 w-full text-left"><i data-lucide="user" class="w-4 h-4"></i> <span>Compte</span></button>
+        </div>
+        <div class="hidden md:block absolute top-4 right-24 z-50">
+             <div class="relative group">
+                <button class="nav-link text-white font-medium flex items-center gap-1 outline-none cursor-pointer py-2 bg-black/20 px-4 rounded-full hover:bg-black/30 transition backdrop-blur-sm">Plus d'options <i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+                <div class="dropdown-menu absolute top-full right-0 mt-2 w-56 bg-white shadow-xl rounded-xl border border-stone-100 overflow-hidden pt-2">
+                    <button onclick="openPageModal('traiteur')" class="block w-full text-left px-5 py-3 hover:bg-amber-50 text-stone-600 hover:text-amber-600 transition border-b border-stone-50 flex items-center gap-2"><i data-lucide="chef-hat" class="w-4 h-4"></i> Traiteur</button>
+                    <button onclick="openPageModal('galerie')" class="block w-full text-left px-5 py-3 hover:bg-amber-50 text-stone-600 hover:text-amber-600 transition border-b border-stone-50 flex items-center gap-2"><i data-lucide="image" class="w-4 h-4"></i> Galerie</button>
+                    <button onclick="openPageModal('carrieres')" class="block w-full text-left px-5 py-3 hover:bg-amber-50 text-stone-600 hover:text-amber-600 transition border-b border-stone-50 flex items-center gap-2"><i data-lucide="briefcase" class="w-4 h-4"></i> Carrières</button>
+                    <button onclick="openPageModal('compte')" class="block w-full text-left px-5 py-3 hover:bg-amber-50 text-stone-600 hover:text-amber-600 transition flex items-center gap-2"><i data-lucide="user" class="w-4 h-4"></i> Mon Compte</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- === PAGE ACCUEIL === -->
+    <div id="page-home" class="page-section active">
+        <section class="hero-bg flex items-center justify-center text-center px-4 pt-32 pb-20">
+            <div class="max-w-4xl mx-auto text-white flex flex-col items-center justify-center h-full">
+                <div class="mb-6 animate-fade-in-up"><span class="inline-block text-amber-400 text-xl md:text-2xl font-serif font-medium tracking-wider uppercase">Bienvenue chez Coumba Restau</span></div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-lg animate-fade-in-up" style="animation-delay: 0.1s;">L'Excellence de la <br/> Cuisine Sénégalaise</h1>
+                <p class="text-lg md:text-xl text-stone-100 mb-12 max-w-2xl mx-auto font-light drop-shadow-md animate-fade-in-up" style="animation-delay: 0.2s;">Une fusion entre traditions culinaires ancestrales et gastronomie moderne. Commandez vos plats préférés ou réservez une table.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-3xl mx-auto animate-fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="glass-card p-5 flex items-center gap-4 text-left hover:bg-white/20 transition"><div class="bg-white/20 p-3 rounded-full"><i data-lucide="clock" class="w-6 h-6 text-amber-400"></i></div><div><h4 class="font-bold text-sm uppercase text-stone-300">Horaires d'ouverture</h4><p class="text-amber-200 text-xs font-medium uppercase tracking-wide mb-1">Lun - Ven</p><p class="font-semibold text-white text-lg">11:00 - 23:00</p></div></div>
+                    <div class="glass-card p-5 flex items-center gap-4 text-left hover:bg-white/20 transition"><div class="bg-white/20 p-3 rounded-full"><i data-lucide="map-pin" class="w-6 h-6 text-amber-400"></i></div><div><h4 class="font-bold text-sm uppercase text-stone-300">Adresse</h4><p class="font-semibold text-white text-lg">123 Rue de la Rép.</p></div></div>
+                    <div class="glass-card p-5 flex items-center gap-4 text-left hover:bg-white/20 transition"><div class="bg-white/20 p-3 rounded-full"><i data-lucide="phone" class="w-6 h-6 text-amber-400"></i></div><div><h4 class="font-bold text-sm uppercase text-stone-300">Contact</h4><p class="font-semibold text-white text-lg">+221 33 800 00 00</p></div></div>
+                </div>
+            </div>
+        </section>
+        <!-- [MENU, RESERVATION, AVIS SECTIONS - Same as before] -->
+        <section id="menu" class="py-20 bg-white relative">
+            <div class="container mx-auto px-6 pb-20">
+                <div class="text-center mb-10"><span class="text-amber-600 font-bold uppercase tracking-wider text-sm">Menu</span><h2 class="text-4xl font-serif font-bold text-stone-800 mt-2">Commandez vos Plats</h2><div class="w-24 h-1 bg-amber-500 mx-auto mt-4"></div></div>
+                <div class="flex flex-wrap justify-center gap-2 mb-12"><button onclick="filterMenu('all')" class="menu-tab active px-6 py-2 rounded-full border-2 border-amber-600 bg-amber-600 text-white font-bold transition hover:bg-amber-700">Tout</button><button onclick="filterMenu('entree')" class="menu-tab px-6 py-2 rounded-full border-2 border-stone-200 text-stone-600 font-bold transition hover:border-amber-600 hover:text-amber-600">Entrées</button><button onclick="filterMenu('plat')" class="menu-tab px-6 py-2 rounded-full border-2 border-stone-200 text-stone-600 font-bold transition hover:border-amber-600 hover:text-amber-600">Plats</button><button onclick="filterMenu('dessert')" class="menu-tab px-6 py-2 rounded-full border-2 border-stone-200 text-stone-600 font-bold transition hover:border-amber-600 hover:text-amber-600">Desserts</button><button onclick="filterMenu('boisson')" class="menu-tab px-6 py-2 rounded-full border-2 border-stone-200 text-stone-600 font-bold transition hover:border-amber-600 hover:text-amber-600">Boissons</button></div>
+                <div class="max-w-5xl mx-auto"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="menu-grid">
+                    <!-- ITEMS -->
+                     <div class="menu-item group relative bg-stone-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition border border-stone-100" data-category="entree"><div class="h-56 overflow-hidden relative"><img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><button onclick="showDishInfo('Fatayas')" class="absolute top-3 right-3 bg-white/90 p-2 rounded-full text-stone-700 hover:text-amber-600 shadow-md transition"><i data-lucide="info" class="w-4 h-4"></i></button></div><div class="p-5"><div class="flex justify-between items-start mb-2"><h3 class="text-xl font-serif font-bold">Fatayas (3 pièces)</h3><span class="text-amber-600 font-bold">2 500 F</span></div><p class="text-stone-500 text-sm mb-4">Chaussons croustillants farcis.</p><button onclick="addToCart(this, 'Fatayas', 2500)" class="w-full bg-white border-2 border-stone-200 text-stone-700 font-bold py-2 rounded-lg hover:bg-amber-600 hover:border-amber-600 hover:text-white transition flex items-center justify-center gap-2"><i data-lucide="plus" class="w-4 h-4"></i> Ajouter</button></div></div>
+                     <div class="menu-item group relative bg-stone-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition border border-stone-100" data-category="plat"><div class="h-56 overflow-hidden relative"><img src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><button onclick="showDishInfo('Thieboudienne')" class="absolute top-3 right-3 bg-white/90 p-2 rounded-full text-stone-700 hover:text-amber-600 shadow-md transition"><i data-lucide="info" class="w-4 h-4"></i></button></div><div class="p-5"><div class="flex justify-between items-start mb-2"><h3 class="text-xl font-serif font-bold">Thieboudienne</h3><span class="text-amber-600 font-bold">4 500 F</span></div><p class="text-stone-500 text-sm mb-4">Le plat national, riz au poisson.</p><button onclick="addToCart(this, 'Thieboudienne', 4500)" class="w-full bg-white border-2 border-stone-200 text-stone-700 font-bold py-2 rounded-lg hover:bg-amber-600 hover:border-amber-600 hover:text-white transition flex items-center justify-center gap-2"><i data-lucide="plus" class="w-4 h-4"></i> Ajouter</button></div></div>
+                     <div class="menu-item group relative bg-stone-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition border border-stone-100" data-category="plat"><div class="h-56 overflow-hidden relative"><img src="https://images.unsplash.com/photo-1574484284008-48552748f358?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><button onclick="showDishInfo('Yassa Poulet')" class="absolute top-3 right-3 bg-white/90 p-2 rounded-full text-stone-700 hover:text-amber-600 shadow-md transition"><i data-lucide="info" class="w-4 h-4"></i></button></div><div class="p-5"><div class="flex justify-between items-start mb-2"><h3 class="text-xl font-serif font-bold">Yassa Poulet</h3><span class="text-amber-600 font-bold">4 000 F</span></div><p class="text-stone-500 text-sm mb-4">Poulet braisé, oignons, citron.</p><button onclick="addToCart(this, 'Yassa Poulet', 4000)" class="w-full bg-white border-2 border-stone-200 text-stone-700 font-bold py-2 rounded-lg hover:bg-amber-600 hover:border-amber-600 hover:text-white transition flex items-center justify-center gap-2"><i data-lucide="plus" class="w-4 h-4"></i> Ajouter</button></div></div>
+                     <div class="menu-item group relative bg-stone-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition border border-stone-100" data-category="plat"><div class="h-56 overflow-hidden relative"><img src="https://images.unsplash.com/photo-1606728035753-307834af822a?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><button onclick="showDishInfo('Mafé Bœuf')" class="absolute top-3 right-3 bg-white/90 p-2 rounded-full text-stone-700 hover:text-amber-600 shadow-md transition"><i data-lucide="info" class="w-4 h-4"></i></button></div><div class="p-5"><div class="flex justify-between items-start mb-2"><h3 class="text-xl font-serif font-bold">Mafé Bœuf</h3><span class="text-amber-600 font-bold">4 500 F</span></div><p class="text-stone-500 text-sm mb-4">Ragoût à la pâte d'arachide.</p><button onclick="addToCart(this, 'Mafé Bœuf', 4500)" class="w-full bg-white border-2 border-stone-200 text-stone-700 font-bold py-2 rounded-lg hover:bg-amber-600 hover:border-amber-600 hover:text-white transition flex items-center justify-center gap-2"><i data-lucide="plus" class="w-4 h-4"></i> Ajouter</button></div></div>
+                     <div class="menu-item group relative bg-stone-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition border border-stone-100" data-category="dessert"><div class="h-56 overflow-hidden relative"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><button onclick="showDishInfo('Thiakry')" class="absolute top-3 right-3 bg-white/90 p-2 rounded-full text-stone-700 hover:text-amber-600 shadow-md transition"><i data-lucide="info" class="w-4 h-4"></i></button></div><div class="p-5"><div class="flex justify-between items-start mb-2"><h3 class="text-xl font-serif font-bold">Thiakry</h3><span class="text-amber-600 font-bold">2 000 F</span></div><p class="text-stone-500 text-sm mb-4">Couscous de mil, yaourt sucré.</p><button onclick="addToCart(this, 'Thiakry', 2000)" class="w-full bg-white border-2 border-stone-200 text-stone-700 font-bold py-2 rounded-lg hover:bg-amber-600 hover:border-amber-600 hover:text-white transition flex items-center justify-center gap-2"><i data-lucide="plus" class="w-4 h-4"></i> Ajouter</button></div></div>
+                     <div class="menu-item group relative bg-stone-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition border border-stone-100" data-category="boisson"><div class="h-56 overflow-hidden relative"><img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><button onclick="showDishInfo('Jus de Bissap')" class="absolute top-3 right-3 bg-white/90 p-2 rounded-full text-stone-700 hover:text-amber-600 shadow-md transition"><i data-lucide="info" class="w-4 h-4"></i></button></div><div class="p-5"><div class="flex justify-between items-start mb-2"><h3 class="text-xl font-serif font-bold">Jus de Bissap</h3><span class="text-amber-600 font-bold">1 000 F</span></div><p class="text-stone-500 text-sm mb-4">Infusion d'hibiscus rafraîchissante.</p><button onclick="addToCart(this, 'Jus de Bissap', 1000)" class="w-full bg-white border-2 border-stone-200 text-stone-700 font-bold py-2 rounded-lg hover:bg-amber-600 hover:border-amber-600 hover:text-white transition flex items-center justify-center gap-2"><i data-lucide="plus" class="w-4 h-4"></i> Ajouter</button></div></div>
+                     <div class="menu-item hidden-item hidden group relative bg-stone-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition border border-stone-100" data-category="entree"><div class="h-56 overflow-hidden relative"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><button onclick="showDishInfo('Salade Fraîcheur')" class="absolute top-3 right-3 bg-white/90 p-2 rounded-full text-stone-700 hover:text-amber-600 shadow-md transition"><i data-lucide="info" class="w-4 h-4"></i></button></div><div class="p-5"><div class="flex justify-between items-start mb-2"><h3 class="text-xl font-serif font-bold">Salade Fraîcheur</h3><span class="text-amber-600 font-bold">3 000 F</span></div><p class="text-stone-500 text-sm mb-4">Légumes de saison et vinaigrette.</p><button onclick="addToCart(this, 'Salade', 3000)" class="w-full bg-white border-2 border-stone-200 text-stone-700 font-bold py-2 rounded-lg hover:bg-amber-600 hover:border-amber-600 hover:text-white transition flex items-center justify-center gap-2"><i data-lucide="plus" class="w-4 h-4"></i> Ajouter</button></div></div>
+                </div>
+                <div class="text-center mt-12"><button id="see-more-btn" onclick="toggleMoreMenu()" class="bg-stone-100 text-stone-800 hover:bg-amber-600 hover:text-white px-8 py-3 rounded-full font-bold transition shadow-md flex items-center gap-2 mx-auto"><span>Voir plus</span><i data-lucide="chevron-down" class="w-4 h-4"></i></button></div></div>
+        </section>
+
+        <section id="reservation" class="py-20 bg-stone-50 border-t border-stone-200"><div class="container mx-auto px-6 pb-20"><div class="flex flex-col md:flex-row gap-12 items-center"><div class="md:w-1/2"><span class="text-amber-600 font-bold uppercase tracking-wider text-sm">Réservation</span><h2 class="text-4xl font-serif font-bold text-stone-800 mt-2 mb-6">Réservez Votre Table</h2><p class="text-stone-600 mb-8 leading-relaxed">Assurez-vous une place pour une expérience culinaire mémorable.</p><div class="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm border border-stone-100 w-fit"><div class="bg-amber-100 p-3 rounded-full text-amber-600"><i data-lucide="phone-call" class="w-6 h-6"></i></div><div><p class="text-sm text-stone-500">Réservation par téléphone</p><p class="font-bold text-stone-800 text-lg">+221 33 800 00 00</p></div></div></div><div class="md:w-1/2 bg-white p-8 rounded-2xl shadow-xl border border-stone-100 w-full"><form onsubmit="event.preventDefault(); alert('Demande de réservation envoyée !');" class="space-y-6"><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div><label class="block text-sm font-bold text-stone-700 mb-2">Nom</label><input type="text" class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-amber-500 outline-none transition" placeholder="Votre nom"></div><div><label class="block text-sm font-bold text-stone-700 mb-2">Téléphone</label><input type="tel" class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-amber-500 outline-none transition" placeholder="Votre numéro"></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><div><label class="block text-sm font-bold text-stone-700 mb-2">Date</label><input type="date" class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-amber-500 outline-none transition"></div><div><label class="block text-sm font-bold text-stone-700 mb-2">Heure</label><input type="time" class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-amber-500 outline-none transition"></div><div><label class="block text-sm font-bold text-stone-700 mb-2">Personnes</label><select class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-amber-500 outline-none transition"><option>2</option><option>3</option><option>4</option><option>5+</option></select></div></div><button type="submit" class="w-full bg-stone-800 text-white font-bold py-4 rounded-lg hover:bg-stone-900 transition shadow-lg">Confirmer la Réservation</button></form></div></div></div></section>
+
+        <section id="avis" class="py-20 bg-white border-t border-stone-200">
+            <div class="container mx-auto px-6 pb-20">
+                <div class="text-center mb-12"><span class="text-amber-600 font-bold uppercase tracking-wider text-sm">Témoignages</span><h2 class="text-4xl font-serif font-bold text-stone-800 mt-2">Ce que disent nos clients</h2></div>
+                <div class="max-w-2xl mx-auto bg-stone-50 p-8 rounded-2xl shadow-md mb-16 relative"><h3 class="text-2xl font-bold text-stone-800 mb-6 text-center">Laisser un avis</h3><form onsubmit="submitReview(event)"><div class="flex justify-center gap-2 mb-6" id="star-rating"><i data-lucide="star" class="w-8 h-8 star-btn" onclick="rate(1)"></i><i data-lucide="star" class="w-8 h-8 star-btn" onclick="rate(2)"></i><i data-lucide="star" class="w-8 h-8 star-btn" onclick="rate(3)"></i><i data-lucide="star" class="w-8 h-8 star-btn" onclick="rate(4)"></i><i data-lucide="star" class="w-8 h-8 star-btn" onclick="rate(5)"></i></div><input type="hidden" id="rating-input" required><div class="mb-4"><input type="text" id="review-name" placeholder="Votre nom" class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:border-amber-500 outline-none" required></div><div class="mb-4 relative"><textarea id="review-message" rows="3" placeholder="Votre message..." class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:border-amber-500 outline-none" required></textarea></div><button type="submit" class="w-full bg-amber-600 text-white font-bold py-3 rounded-lg hover:bg-amber-700 transition">Publier l'avis</button></form></div>
+                <div id="reviews-list" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                     <div class="bg-stone-50 p-6 rounded-xl shadow-sm"><div class="flex text-amber-500 mb-3"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div><p class="text-stone-600 mb-4 italic">"Le Thieboudienne est excellent, je recommande !"</p><h4 class="font-bold text-stone-800">- Aminata D.</h4></div>
+                     <div class="bg-stone-50 p-6 rounded-xl shadow-sm"><div class="flex text-amber-500 mb-3"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4"></i></div><p class="text-stone-600 mb-4 italic">"Service impeccable et ambiance chaleureuse."</p><h4 class="font-bold text-stone-800">- Moussa S.</h4></div>
+                     <div class="bg-stone-50 p-6 rounded-xl shadow-sm"><div class="flex text-amber-500 mb-3"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div><p class="text-stone-600 mb-4 italic">"Les saveurs sont authentiques, un vrai voyage."</p><h4 class="font-bold text-stone-800">- Sophie T.</h4></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- === PAGE PANIER (Plein Écran) === -->
+    <div id="page-panier" class="page-section">
+        <section class="internal-page-padding bg-stone-50 min-h-screen">
+            <div class="container mx-auto px-6 pb-20">
+                <h2 class="text-3xl font-serif font-bold text-center mb-10 text-amber-700">Votre Panier</h2>
+                <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl border border-stone-200 overflow-hidden">
+                    <div id="full-cart-items" class="p-6 space-y-6"><p class="text-center text-stone-500 py-10">Votre panier est vide.</p></div>
+                    <div class="bg-stone-50 p-6 border-t border-stone-200">
+                        <div class="flex justify-between items-center text-xl font-bold mb-6"><span>Total</span><span id="full-cart-total" class="text-amber-600">0 FCFA</span></div>
+                        <div class="flex gap-4 flex-col md:flex-row"><button onclick="showPage('home')" class="flex-1 py-3 rounded-lg border border-stone-300 text-stone-600 font-bold hover:bg-white transition">Continuer mes achats</button><button onclick="showPage('checkout')" id="full-checkout-btn" disabled class="flex-1 bg-amber-600 text-white py-3 rounded-lg font-bold hover:bg-amber-700 transition disabled:opacity-50 disabled:cursor-not-allowed">Passer la commande</button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- === PAGE CAISSE (Formulaire) === -->
+    <div id="page-checkout" class="page-section">
+        <section class="internal-page-padding bg-stone-50 min-h-screen">
+            <div class="container mx-auto px-6 pb-20">
+                <h2 class="text-3xl font-serif font-bold text-center mb-10 text-amber-700">Finaliser la Commande</h2>
+                <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl border border-stone-200 overflow-hidden p-6 md:p-8">
+                    <form onsubmit="event.preventDefault(); showPage('confirmation'); updateConfirmationPage();" class="space-y-6">
+                        <input type="hidden" id="order-type" value="Livraison">
+                        <div><label class="block text-sm font-bold text-stone-700 mb-2">Nom (Optionnel)</label><input type="text" id="checkout-name" class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:ring-2 focus:ring-amber-500 outline-none text-stone-800" placeholder="Votre nom"></div>
+                        <div><label class="block text-sm font-bold text-stone-700 mb-2">Numéro de téléphone</label><div class="flex"><span class="inline-flex items-center px-4 py-3 rounded-l-lg border border-r-0 border-stone-200 bg-stone-100 text-stone-500 font-bold">🇸🇳 +221</span><input type="tel" id="checkout-phone" required class="w-full px-4 py-3 rounded-r-lg bg-stone-50 border border-stone-200 focus:ring-2 focus:ring-amber-500 outline-none text-stone-800" placeholder="77 000 00 00"></div></div>
+                        <div id="delivery-fields"><div class="mb-6"><label class="block text-sm font-bold text-stone-700 mb-2">Zone de livraison *</label><select id="checkout-zone" class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:ring-2 focus:ring-amber-500 outline-none text-stone-800"><option value="">Sélectionnez une zone</option><option value="Dakar Plateau">Dakar Plateau</option><option value="Medina">Médina</option><option value="Fann">Fann / Point E</option><option value="Mermoz">Mermoz / Sacré Cœur</option><option value="Almadies">Almadies / Ngor</option><option value="Yoff">Yoff</option><option value="Parcelles">Parcelles Assainies</option><option value="Guediawaye">Guédiawaye</option><option value="Pikine">Pikine</option></select></div><div><label class="block text-sm font-bold text-stone-700 mb-2">Adresse de livraison *</label><textarea id="checkout-address" rows="2" class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:ring-2 focus:ring-amber-500 outline-none text-stone-800 resize-none" placeholder="Votre adresse complète (Quartier, repère...)"></textarea></div></div>
+                        <div><label class="block text-sm font-bold text-stone-700 mb-2">Vos indications (Optionnel)</label><textarea id="checkout-notes" rows="2" class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:ring-2 focus:ring-amber-500 outline-none text-stone-800 resize-none" placeholder="Ex: Pas de piment, code porte..."></textarea></div>
+                        
+                        <!-- Articles commandés (Récap) -->
+                        <div class="mt-8 border-t border-stone-100 pt-6">
+                             <h4 class="font-bold text-stone-800 mb-4">Articles commandés</h4>
+                             <div id="checkout-items-list" class="space-y-2 text-sm text-stone-600 mb-4"></div>
+                             
+                             <!-- Pourboire -->
+                             <div class="mb-4">
+                                 <label class="block text-sm font-bold text-stone-700 mb-2">Pourboire</label>
+                                 <div class="flex gap-2">
+                                     <button type="button" onclick="setTip(0)" class="tip-btn px-3 py-1 rounded-full border border-stone-200 text-xs font-bold active bg-amber-600 text-white">Aucun</button>
+                                     <button type="button" onclick="setTip(3)" class="tip-btn px-3 py-1 rounded-full border border-stone-200 text-xs font-bold text-stone-500 hover:border-amber-500">3%</button>
+                                     <button type="button" onclick="setTip(5)" class="tip-btn px-3 py-1 rounded-full border border-stone-200 text-xs font-bold text-stone-500 hover:border-amber-500">5%</button>
+                                     <button type="button" onclick="setTip(7)" class="tip-btn px-3 py-1 rounded-full border border-stone-200 text-xs font-bold text-stone-500 hover:border-amber-500">7%</button>
+                                     <button type="button" onclick="setTip(10)" class="tip-btn px-3 py-1 rounded-full border border-stone-200 text-xs font-bold text-stone-500 hover:border-amber-500">10%</button>
+                                 </div>
+                             </div>
+                             
+                             <div class="space-y-1 text-sm border-t border-stone-100 pt-2">
+                                 <div class="flex justify-between"><span>Sous-total</span><span id="checkout-subtotal">0 FCFA</span></div>
+                                 <div class="flex justify-between" id="checkout-delivery-row"><span>Livraison</span><span id="checkout-delivery-cost">0 FCFA</span></div>
+                                 <div class="flex justify-between"><span>Pourboire</span><span id="checkout-tip">0 FCFA</span></div>
+                                 <div class="flex justify-between font-bold text-lg text-amber-700 mt-2"><span>Total</span><span id="checkout-total">0 FCFA</span></div>
+                             </div>
+                        </div>
+                        
+                        <div class="flex gap-4 pt-4"><button type="button" onclick="showPage('panier')" class="w-1/3 py-3 rounded-lg border border-stone-300 text-stone-600 font-bold hover:bg-stone-50 transition">Retour</button><button type="submit" class="w-2/3 bg-amber-600 text-white py-3 rounded-lg font-bold hover:bg-amber-700 transition shadow-lg flex items-center justify-center gap-2">Suivant <i data-lucide="arrow-right" class="w-4 h-4"></i></button></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- === PAGE CONFIRMATION (NOUVEAU) === -->
+    <div id="page-confirmation" class="page-section">
+        <section class="internal-page-padding bg-stone-50 min-h-screen">
+            <div class="container mx-auto px-6 pb-20">
+                <h2 class="text-3xl font-serif font-bold text-center mb-10 text-amber-700">Confirmation</h2>
+                <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl border border-stone-200 overflow-hidden p-6 md:p-8">
+                    
+                    <!-- Recap Final -->
+                    <div class="mb-8">
+                         <h3 class="font-bold text-lg text-stone-800 mb-4 border-b border-stone-100 pb-2">Résumé de la commande</h3>
+                         <div id="conf-details" class="text-sm text-stone-600 space-y-2 mb-4">
+                             <!-- Details filled by JS -->
+                         </div>
+                         <div id="conf-items" class="space-y-2 mb-4 border-t border-stone-100 pt-4"></div>
+                         <div class="flex justify-between font-bold text-xl text-amber-700 border-t border-stone-200 pt-4">
+                             <span>Total à payer</span>
+                             <span id="conf-total">0 FCFA</span>
+                         </div>
+                    </div>
+
+                    <!-- Mode de Paiement -->
+                    <h4 class="font-bold text-stone-800 mb-4 flex items-center gap-2"><i data-lucide="credit-card" class="w-5 h-5 text-amber-600"></i> Mode de paiement</h4>
+                    <div class="space-y-3 mb-8">
+                        <label class="flex items-center justify-between p-4 border rounded-xl cursor-pointer transition hover:border-amber-500 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50">
+                            <div class="flex items-center gap-3"><input type="radio" name="payment" value="livraison" class="payment-radio hidden" checked><div class="w-5 h-5 rounded-full border-2 border-stone-300 flex items-center justify-center radio-circle bg-white"></div><span class="font-bold text-stone-700">Paiement à la livraison</span></div><i data-lucide="banknote" class="w-5 h-5 text-stone-400"></i>
+                        </label>
+                        <label class="flex items-center justify-between p-4 border rounded-xl cursor-pointer transition hover:border-amber-500 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50">
+                            <div class="flex items-center gap-3"><input type="radio" name="payment" value="wave" class="payment-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-stone-300 flex items-center justify-center radio-circle bg-white"></div><span class="font-bold text-stone-700">Payer avec Wave</span></div><div class="bg-blue-100 text-blue-600 text-xs font-bold px-2 py-1 rounded">WAVE</div>
+                        </label>
+                    </div>
+
+                    <button onclick="confirmOrder()" class="w-full bg-amber-600 text-white py-4 rounded-xl font-bold hover:bg-amber-700 transition shadow-lg flex items-center justify-center gap-2 text-lg">Confirmer la commande <i data-lucide="check-circle" class="w-5 h-5"></i></button>
+                    <button onclick="showPage('checkout')" class="w-full text-stone-500 font-bold py-3 mt-2 hover:text-stone-700 transition text-sm">Retour</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ECRAN SUCCES -->
+    <div id="success-screen" class="hidden fixed inset-0 z-50 bg-stone-50 flex flex-col items-center justify-center text-center p-6">
+        <div class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mb-6 success-icon">
+            <i data-lucide="check" class="w-12 h-12 text-green-600"></i>
+        </div>
+        <h2 class="text-3xl font-serif font-bold text-stone-800 mb-4">Commande Confirmée !</h2>
+        <p class="text-stone-600 mb-8 max-w-md">Votre commande a été enregistrée avec succès. Nous la préparons avec soin.</p>
+        <button onclick="finishOrder()" class="bg-amber-600 text-white px-8 py-3 rounded-full font-bold hover:bg-amber-700 transition shadow-lg">Continuer mes achats</button>
+    </div>
+
+    <!-- PAGE MODAL GENERIQUE -->
+    <div id="page-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-4xl mx-4 overflow-hidden h-[90vh] flex flex-col relative animate-fade-in">
+            <button onclick="closePageModal()" class="absolute top-4 right-4 z-10 bg-white/80 p-2 rounded-full text-stone-600 hover:bg-stone-100 shadow-sm"><i data-lucide="x" class="w-6 h-6"></i></button>
+            <div id="page-modal-content" class="overflow-y-auto p-8 h-full"></div>
+        </div>
+    </div>
+
+    <!-- BOUTONS FLOTTANTS -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4">
+        <div class="fab-container relative">
+            <div class="fab-options flex flex-col gap-3 items-end absolute bottom-0 right-0 mb-16 w-48">
+                <button onclick="toggleChat()" class="bg-white text-stone-800 px-4 py-2 rounded-full shadow-lg font-bold flex items-center gap-2 hover:bg-stone-50 transition border border-stone-200 w-full justify-end"><span>Assistant IA</span><div class="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white"><i data-lucide="bot" class="w-4 h-4"></i></div></button>
+                <a href="https://wa.me/221771234567" target="_blank" class="bg-white text-stone-800 px-4 py-2 rounded-full shadow-lg font-bold flex items-center gap-2 hover:bg-stone-50 transition border border-stone-200 w-full justify-end"><span>WhatsApp</span><div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white"><i data-lucide="message-circle" class="w-4 h-4"></i></div></a>
+            </div>
+            <button class="w-16 h-16 bg-amber-600 rounded-full shadow-2xl flex items-center justify-center text-white hover:bg-amber-700 transition duration-300 transform hover:scale-110"><i data-lucide="message-square-more" class="w-8 h-8"></i></button>
+        </div>
+    </div>
+
+    <!-- MODAL CHATBOT IA -->
+    <div id="ai-chat" class="chat-box fixed bottom-24 right-6 w-80 bg-white rounded-2xl shadow-2xl border border-stone-200 flex-col overflow-hidden z-50 h-96">
+        <div class="bg-indigo-600 p-4 text-white flex justify-between items-center"><div class="flex items-center gap-2"><i data-lucide="bot" class="w-5 h-5"></i><span class="font-bold">Assistant Coumba</span></div><button onclick="toggleChat()" class="hover:text-indigo-200"><i data-lucide="x" class="w-5 h-5"></i></button></div>
+        <div class="p-4 flex-1 overflow-y-auto bg-stone-50 space-y-3 text-sm" id="chat-messages"><div class="bg-white p-3 rounded-lg rounded-tl-none border border-stone-200 self-start shadow-sm">Bonjour ! Je suis l'IA de Coumba Restau. Posez-moi une question sur le menu ou les plats ! 🤖✨</div></div>
+        <div class="p-3 border-t border-stone-200 flex gap-2 bg-white"><input type="text" id="chat-input" placeholder="Ex: Le plat le plus épicé ?" class="flex-1 px-3 py-2 rounded-lg border text-sm outline-none" onkeypress="if(event.key === 'Enter') sendMessage()"><button onclick="sendMessage()" class="bg-indigo-600 text-white p-2 rounded-lg hover:bg-indigo-700 transition"><i data-lucide="send" class="w-4 h-4"></i></button></div>
+    </div>
+
+    <!-- MODAL INFO CULTURELLE IA -->
+    <div id="info-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md mx-4 overflow-hidden">
+            <div class="bg-amber-100 p-6 text-center border-b border-amber-200"><div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white mx-auto mb-3 shadow-lg"><i data-lucide="book-open" class="w-6 h-6"></i></div><h3 class="text-xl font-serif font-bold text-amber-900" id="info-dish-title">Titre du Plat</h3><p class="text-amber-700 text-xs mt-1 uppercase tracking-widest">Culture & Histoire</p></div>
+            <div class="p-6"><div id="info-content" class="prose prose-sm text-stone-700"></div><button onclick="closeInfoModal()" class="w-full mt-6 bg-stone-800 text-white py-3 rounded-lg font-bold hover:bg-stone-900 transition">Fermer</button></div>
+        </div>
+    </div>
+
+    <!-- FOOTER (ORANGE) -->
+    <footer class="bg-amber-600 text-white py-16 pb-28 md:pb-16">
+        <div class="container mx-auto px-6 text-center flex flex-col items-center gap-6">
+            <h2 class="text-3xl font-bold font-serif tracking-wide text-white">Coumba Restau</h2>
+            <div class="flex flex-col items-center gap-4"><span class="text-white/90 font-medium uppercase tracking-wider text-sm">Suivez-nous</span><div class="flex gap-8 justify-center"><a href="#" class="text-white hover:text-stone-200 transition transform hover:scale-110"><i data-lucide="facebook" class="w-7 h-7"></i></a><a href="#" class="text-white hover:text-stone-200 transition transform hover:scale-110"><i data-lucide="instagram" class="w-7 h-7"></i></a><a href="#" class="text-white hover:text-stone-200 transition transform hover:scale-110"><svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.03 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a href="#" class="text-white hover:text-stone-200 transition transform hover:scale-110"><i data-lucide="youtube" class="w-7 h-7"></i></a></div></div>
+            <div class="flex items-center gap-6 mt-4 text-sm font-medium text-white/90"><button onclick="openPageModal('mentions')" class="hover:underline transition">Mentions légales</button><button onclick="openPageModal('politique')" class="hover:underline transition">Politique de confidentialité</button><button onclick="openPageModal('apropos')" class="hover:underline transition">À propos de nous</button></div>
+            <div class="mt-4 text-white/70 text-sm"><p>© 2025 Coumba Restau - Tout droit réservés</p></div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        let cart = [];
+        let currentTipPercent = 0;
+        
+        const apiKey = ""; 
+        const SYSTEM_PROMPT = "Tu es l'assistant expert du restaurant Coumba Restau...";
+        const pageContents = {traiteur:`<h2 class="text-3xl font-bold text-center mb-6">Traiteur</h2><p class="text-center">Contactez-nous pour vos événements.</p>`, galerie:`<h2 class="text-3xl font-bold text-center mb-6">Galerie</h2><p class="text-center">Nos plats en images.</p>`, carrieres:`<h2 class="text-3xl font-bold text-center mb-6">Carrières</h2><p class="text-center">Rejoignez-nous !</p>`, compte:`<h2 class="text-3xl font-bold text-center mb-6">Mon Compte</h2><p class="text-center">Espace membre.</p>`, mentions:`<h2 class="text-3xl font-bold mb-6">Mentions Légales</h2>`, politique:`<h2 class="text-3xl font-bold mb-6">Politique de Confidentialité</h2>`, apropos:`<h2 class="text-3xl font-bold mb-6">À Propos</h2>`};
+        function openPageModal(k){document.getElementById('page-modal-content').innerHTML=pageContents[k];document.getElementById('page-modal').classList.remove('hidden');}
+        function closePageModal(){document.getElementById('page-modal').classList.add('hidden');}
+
+        function showPage(pageId) {
+            if(pageId==='home'||pageId==='menu'||pageId==='reservation'||pageId==='avis'){
+                 document.getElementById('page-home').classList.add('active'); 
+                 ['page-panier','page-checkout','page-confirmation'].forEach(id=>document.getElementById(id).classList.remove('active'));
+                 setTimeout(()=>{const el=document.getElementById(pageId==='home'?'accueil':pageId);if(el)el.scrollIntoView({behavior:'smooth'});},10);
+                 document.getElementById('navbar').classList.add('nav-transparent'); document.getElementById('navbar').classList.remove('nav-scrolled');
+            } else {
+                document.querySelectorAll('.page-section').forEach(el=>el.classList.remove('active'));
+                document.getElementById('page-'+pageId).classList.add('active'); window.scrollTo(0,0);
+                document.getElementById('navbar').classList.remove('nav-transparent'); document.getElementById('navbar').classList.add('nav-scrolled');
+            }
+            document.getElementById('mobile-menu').classList.add('hidden');
+            
+            // Init checkout items if opening checkout
+            if(pageId === 'checkout') updateCheckoutTotals();
+        }
+
+        // --- CHECKOUT & TIP LOGIC ---
+        function setTip(percent) {
+            currentTipPercent = percent;
+            document.querySelectorAll('.tip-btn').forEach(btn => {
+                btn.classList.remove('active','bg-amber-600','text-white');
+                btn.classList.add('text-stone-500');
+            });
+            // Find clicked button (simple logic based on onclick)
+            event.target.classList.add('active','bg-amber-600','text-white');
+            event.target.classList.remove('text-stone-500');
+            updateCheckoutTotals();
+        }
+
+        function updateCheckoutTotals() {
+            const list = document.getElementById('checkout-items-list');
+            list.innerHTML = '';
+            let subtotal = 0;
+            cart.forEach(item => {
+                subtotal += item.price;
+                list.innerHTML += `<div class="flex justify-between"><span>${item.name}</span><span>${item.price} FCFA</span></div>`;
+            });
+            
+            const deliveryCost = document.getElementById('order-type').value === 'livraison' ? 1500 : 0; // Exemple 1500F
+            const tipAmount = Math.round(subtotal * (currentTipPercent / 100));
+            const total = subtotal + deliveryCost + tipAmount;
+
+            document.getElementById('checkout-subtotal').innerText = subtotal + ' FCFA';
+            document.getElementById('checkout-delivery-cost').innerText = deliveryCost + ' FCFA';
+            document.getElementById('checkout-tip').innerText = tipAmount + ' FCFA';
+            document.getElementById('checkout-total').innerText = total + ' FCFA';
+            
+            // Hide delivery row if not delivery
+             document.getElementById('checkout-delivery-row').style.display = deliveryCost > 0 ? 'flex' : 'none';
+        }
+
+        function updateConfirmationPage() {
+            const name = document.getElementById('checkout-name').value || 'Client';
+            const phone = document.getElementById('checkout-phone').value;
+            const address = document.getElementById('checkout-address').value;
+            const type = document.getElementById('order-type').value;
+            
+            let detailsHtml = `<p><strong>Nom:</strong> ${name}</p><p><strong>Tél:</strong> ${phone}</p>`;
+            if(type === 'livraison') detailsHtml += `<p><strong>Adresse:</strong> ${address}</p>`;
+            document.getElementById('conf-details').innerHTML = detailsHtml;
+            
+            const itemsContainer = document.getElementById('conf-items');
+            itemsContainer.innerHTML = '';
+            let subtotal = 0;
+            cart.forEach(item => {
+                subtotal += item.price;
+                itemsContainer.innerHTML += `<div class="flex justify-between text-sm"><span>${item.name}</span><span>${item.price} FCFA</span></div>`;
+            });
+            
+            const deliveryCost = type === 'livraison' ? 1500 : 0;
+            const tipAmount = Math.round(subtotal * (currentTipPercent / 100));
+            const total = subtotal + deliveryCost + tipAmount;
+            
+            // Add summary lines to confirmation
+            itemsContainer.innerHTML += `<div class="border-t border-stone-100 mt-2 pt-2 flex justify-between text-xs text-stone-500"><span>Livraison</span><span>${deliveryCost} FCFA</span></div>`;
+            itemsContainer.innerHTML += `<div class="flex justify-between text-xs text-stone-500"><span>Pourboire</span><span>${tipAmount} FCFA</span></div>`;
+            
+            document.getElementById('conf-total').innerText = total + ' FCFA';
+        }
+
+        function confirmOrder() {
+             document.getElementById('success-screen').classList.remove('hidden');
+        }
+        function finishOrder() {
+            cart = []; updateCartUI();
+            document.getElementById('success-screen').classList.add('hidden');
+            showPage('home');
+        }
+
+        // --- Standard Functions ---
+        function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('hidden'); }
+        function toggleCart() { showPage('panier'); }
+        function addToCart(b,n,p){const i=b.closest('.menu-item').querySelector('img').src;cart.push({name:n,price:p,img:i});updateCartUI();document.getElementById('header-cart-count').classList.add('scale-125');setTimeout(()=>document.getElementById('header-cart-count').classList.remove('scale-125'),200);}
+        function removeFromCart(i){cart.splice(i,1);updateCartUI();}
+        function updateCartUI(){
+            const c=document.getElementById('full-cart-items');const t=document.getElementById('full-cart-total');const b=document.getElementById('full-checkout-btn');
+            document.getElementById('header-cart-count').textContent=cart.length;
+            c.innerHTML='';let tot=0;
+            if(cart.length===0){c.innerHTML='<p class="text-center text-stone-500 py-10">Vide</p>';b.disabled=true;}
+            else{cart.forEach((item,i)=>{tot+=item.price;c.innerHTML+=`<div class="flex gap-4 items-center bg-white p-4 rounded-xl border border-stone-100 shadow-sm relative"><img src="${item.img}" class="w-20 h-20 rounded-lg object-cover"><div class="flex-1"><h4 class="font-bold text-stone-800">${item.name}</h4><p class="text-amber-600 font-bold">${item.price} FCFA</p></div><button onclick="removeFromCart(${i})" class="absolute top-4 right-4 text-stone-400 hover:text-red-500 bg-stone-50 p-2 rounded-full"><i data-lucide="trash-2" class="w-5 h-5"></i></button></div>`;});b.disabled=false;}
+            t.textContent=tot+' FCFA';lucide.createIcons();
+        }
+        function checkoutWhatsApp(){showPage('checkout');} // Button in cart goes to checkout page
+        function filterMenu(c){document.querySelectorAll('.menu-tab').forEach(b=>{b.classList.remove('bg-amber-600','text-white');b.classList.add('text-stone-600');});event.target.classList.add('bg-amber-600','text-white');document.querySelectorAll('.menu-item').forEach(i=>{if(c==='all'){if(i.classList.contains('hidden-item'))i.classList.add('hidden');else i.classList.remove('hidden');document.getElementById('see-more-btn').style.display='flex';}else{if(i.dataset.category===c)i.classList.remove('hidden');else i.classList.add('hidden');document.getElementById('see-more-btn').style.display='none';}});}
+        function toggleMoreMenu(){const h=document.querySelectorAll('.hidden-item');const t=document.querySelector('#see-more-btn span');const i=document.querySelector('#see-more-btn i');if(h[0].classList.contains('hidden')){h.forEach(x=>{x.classList.remove('hidden');x.classList.add('animate-fade-in');});t.textContent="Voir moins";i.setAttribute('data-lucide','chevron-up');}else{h.forEach(x=>{x.classList.add('hidden');x.classList.remove('animate-fade-in');});t.textContent="Voir plus";i.setAttribute('data-lucide','chevron-down');}}
+        function toggleChat(){document.getElementById('ai-chat').classList.toggle('active');}
+        async function showDishInfo(n){document.getElementById('info-modal').classList.remove('hidden');document.getElementById('info-content').innerHTML='...';const r=await callGemini("Info sur "+n);document.getElementById('info-content').innerHTML=marked.parse(r);}
+        function closeInfoModal(){document.getElementById('info-modal').classList.add('hidden');}
+        async function callGemini(t){try{const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({contents:[{role:"user",parts:[{text:SYSTEM_PROMPT+"\nUser:"+t}]}]})});const d=await r.json();return d.candidates[0].content.parts[0].text;}catch{return"Erreur";}}
+        async function sendMessage(){const i=document.getElementById('chat-input');const t=i.value;if(!t)return;document.getElementById('chat-messages').innerHTML+=`<div class="bg-indigo-100 p-2 rounded-lg self-end text-right mb-2 max-w-[85%] shadow-sm">${t}</div>`;i.value='';const r=await callGemini(t);document.getElementById('chat-messages').innerHTML+=`<div class="bg-white p-3 rounded-lg self-start mb-2 max-w-[85%] shadow-sm prose prose-sm">${marked.parse(r)}</div>`;}
+        function submitReview(e){e.preventDefault();alert("Avis envoyé !");}
+        function rate(n){/* rating logic */}
+
+        // Order Type Logic
+        function setOrderType(type) {
+            document.querySelectorAll('.order-type-btn').forEach(btn => { btn.classList.remove('active', 'bg-amber-50', 'border-amber-600', 'text-amber-700'); btn.classList.add('border-stone-200', 'text-stone-500'); });
+            const activeBtn = document.getElementById('btn-' + type); activeBtn.classList.add('active', 'bg-amber-50', 'border-amber-600', 'text-amber-700'); activeBtn.classList.remove('border-stone-200', 'text-stone-500');
+            document.getElementById('order-type').value = type;
+            const df = document.getElementById('delivery-fields');
+            if(type==='livraison') df.classList.remove('hidden'); else df.classList.add('hidden');
+            updateCheckoutTotals(); // Update totals because delivery cost might change
+        }
+
+        window.addEventListener('scroll',()=>{if(!document.getElementById('page-home').classList.contains('active'))return;const n=document.getElementById('navbar');if(window.scrollY>50){n.classList.remove('nav-transparent');n.classList.add('nav-scrolled');}else{n.classList.add('nav-transparent');n.classList.remove('nav-scrolled');}});
+    </script>
+</body>
+</html>
